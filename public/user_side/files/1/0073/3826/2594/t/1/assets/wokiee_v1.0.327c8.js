@@ -1,0 +1,42 @@
+var json = {
+	"version": "1.0.3",
+	"defaulturl": "",
+	"icon_youtube" : '<img src="https://cdn.shopify.com/s/files/1/0073/3826/2594/files/youtube.png" class="youtubebutton" alt="YouTube" style="position: absolute; top: 0; right: 0; background: #fff3f3; padding: 12px; cursor: pointer;">',
+	"images": {
+      "index-section-big_banners": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-big_banners.jpg",
+      "index-section-blog": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-blog.jpg",
+      "index-section-border_banners": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-border_banners.jpg",
+      "index-section-brands": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-brands.jpg",
+      "index-section-column_products": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-column_products.jpg",
+      "index-section-construction_banners": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-construction_banners.jpg?3659288373185933968",
+      "index-section-iconbanners": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-iconbanners.jpg",
+      "index-section-instagram": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-instagram.jpg",
+      "index-section-instagram_shop": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-instagram_shop.jpg",
+      "index-section-lookbook": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-lookbook.jpg",
+      "index-section-lookbookmasonry": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-lookbookmasonry.jpg",
+      "index-section-masonry_products": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-masonry_products.jpg",
+      "index-section-products": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-products.jpg",
+      "index-section-promocollections": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-promocollections.jpg",
+      "index-section-revolution": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-revolution.jpg",
+      "index-section-simple_banners": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-simple_banners.jpg",
+      "index-section-tabs": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-tabs.jpg",
+      "index-section-testimonials": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-testimonials.jpg",
+      "index-section-text_block": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-text_block.jpg",
+      "index-section-simple_banners2": "//cdn.shopify.com/s/files/1/0073/3826/2594/files/index-section-simplebanner2.jpg"
+	},
+	"youtube": {
+      "index-section-big_banners": "https://www.youtube.com/watch?v=-e6THy0xmfs&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=18",
+      "index-section-border_banners": "https://www.youtube.com/watch?v=bmGiOtnk4OI&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=19",
+      "index-section-column_products": "https://www.youtube.com/watch?v=7k6sdhnjel0&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=20",
+      "index-section-construction_banners": "https://www.youtube.com/watch?v=8DQWhuQ78Rk&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=21",
+      "index-section-iconbanners": "https://www.youtube.com/watch?v=-TASsMuuINc&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=22",
+      "index-section-lookbook": "https://www.youtube.com/watch?v=DVHaYtqLqkY&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=23",
+      "index-section-lookbookmasonry": "https://www.youtube.com/watch?v=3_QTO4hhqkE&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=24",
+      "index-section-products": "https://www.youtube.com/watch?v=vuNRXo9NPp8&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=25",
+      "index-section-promocollections": "https://www.youtube.com/watch?v=JA9bZyLwtuo&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=26",
+      "index-section-revolution": "https://www.youtube.com/watch?v=SjlfvuJ2wUg&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=27",
+      "index-section-simple_banners": "https://www.youtube.com/watch?v=Adb6DkoAgFQ&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=28",
+      "index-section-tabs": "https://www.youtube.com/watch?v=ih-Z1KIFAVs&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=30",
+      "index-section-simple_banners2": "https://www.youtube.com/watch?v=6uCU2gLWiwU&list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1&index=29"
+	}
+};1
