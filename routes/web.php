@@ -12,14 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user_side.index');
+});
+//This tow routes for testing purpose
+Route::get('/temp_login', function () {
+    return view('user_side.account.login');
 });
 
-Route::get('/user', function () {
-    return view('user_side.404');
+Route::get('/temp_register', function () {
+    return view('user_side.account.register');
 });
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::resource('user','UserController');
+
+Route::resource('product','ProductController');
+Route::resource('category','CategoryController');
+Route::resource('tag','TagController');
+Route::resource('favorite','favoriteController');
+
+
+
