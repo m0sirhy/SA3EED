@@ -224,73 +224,60 @@
 
     <!-- Modals -->
     <style>
-        <!-- .tt-external {
-            margin-top: 35px;
-        }
+        ><!--
+.tt-external{
+		margin-top: 35px;
+		}
+		.tt-external>*{
+		background: #08da97 !important;
+		}
+		#tt-boxedbutton .rtlbutton-color{
+			height: 30px;
+		}
+		#tt-boxedbutton .rtlbutton.tt-external:hover .box-description {
+			width: 102px;
+		}
+		/* modal-preview-layout */
+		.modal-preview-layout{
+		  -webkit-border-radius: 6px;
+		  -moz-border-radius: 6px;
+		  border-radius: 6px;
+		  background-color: #ffffff;
+		  padding: 20px;
+		}
+		.modal-preview-layout .modal-preview-list .tt-item:not(:first-child){
+		  margin-top: 20px;
+		}
+		.modal-preview-layout .tt-item img{
+		  width: 100%;
+		  max-width: 100%;
+		}
+		/* modal size */
+		.modal-external {
+		  width: 656px;
+		}
+		@media (max-width: 720px) {
+		  .modal-external {
+			width: 500px;
+		  }
+		}
+		@media (max-width: 580px) {
+		  .modal-external {
+			width: 420px;
+		  }
+		}
+		@media (max-width: 500px) {
+		  .modal-external {
+			width: 280px;
+		  }
+		}
+.tt-back-to-top{display: none !important;}
+#js-facebook-chat-iframe{
+bottom: 10px !important;
+right: 10px !important;
+}
+-->
         
-        .tt-external>* {
-            background: #08da97 !important;
-        }
-        
-        #tt-boxedbutton .rtlbutton-color {
-            height: 30px;
-        }
-        
-        #tt-boxedbutton .rtlbutton.tt-external:hover .box-description {
-            width: 102px;
-        }
-        /* modal-preview-layout */
-        
-        .modal-preview-layout {
-            -webkit-border-radius: 6px;
-            -moz-border-radius: 6px;
-            border-radius: 6px;
-            background-color: #ffffff;
-            padding: 20px;
-        }
-        
-        .modal-preview-layout .modal-preview-list .tt-item:not(:first-child) {
-            margin-top: 20px;
-        }
-        
-        .modal-preview-layout .tt-item img {
-            width: 100%;
-            max-width: 100%;
-        }
-        /* modal size */
-        
-        .modal-external {
-            width: 656px;
-        }
-        
-        @media (max-width: 720px) {
-            .modal-external {
-                width: 500px;
-            }
-        }
-        
-        @media (max-width: 580px) {
-            .modal-external {
-                width: 420px;
-            }
-        }
-        
-        @media (max-width: 500px) {
-            .modal-external {
-                width: 280px;
-            }
-        }
-        
-        .tt-back-to-top {
-            display: none !important;
-        }
-        
-        #js-facebook-chat-iframe {
-            bottom: 10px !important;
-            right: 10px !important;
-        }
-        
-        -->
     </style>
     <script>
         // <![CDATA[

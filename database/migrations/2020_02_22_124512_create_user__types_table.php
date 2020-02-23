@@ -15,9 +15,9 @@ class CreateUserTypesTable extends Migration
     {
         Schema::create('user__types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->intger('user_id');
-            $table->boolean('individual')->default('true');
-            $table->boolean('company')->default('false');
+            $table->integer('user_id');
+            $table->integer('individual')->default(1);
+            $table->integer('company')->default(0);
             $table->timestamps();
         });
     }
