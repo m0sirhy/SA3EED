@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class DashboardController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,9 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        return view('user_side.category');
-
-        
+        return view('dashboard.welcome');
     }
 
     /**
