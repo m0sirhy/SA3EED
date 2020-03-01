@@ -5,10 +5,13 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use HasRoles;
+
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'user_name','password' ,'email', 'password','image'
     ];
 
     /**
@@ -36,6 +39,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $appends = ['image_path'];
+
+
     public function user_info()
     {
         return $this->hasOne('App\User_Info');
@@ -52,4 +59,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Favorite');
     }
+
+
+public function getImagePathAttribute(){
+    return asset('uploads/user_images/'.$this->image);
+}
+
 }
