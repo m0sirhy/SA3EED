@@ -320,7 +320,7 @@
         //
         // });
 
-        CKEDITOR.config.language =  "{{ app()->getLocale() }}";
+        CKEDITOR.config.language =  "ar";
 
     });//end of ready
     

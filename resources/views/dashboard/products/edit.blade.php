@@ -7,7 +7,7 @@
             <h1>@lang('site.products')</h1>
 
             <ol class="breadcrumb">
-                <li><a href="{{ route('dashboard.welcome') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a></li>
+                <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a></li>
                 <li><a href="{{ route('dashboard.products.index') }}"> @lang('site.products')</a></li>
                 <li class="active">@lang('site.edit')</li>
             </ol>
@@ -39,41 +39,33 @@
                             </select>
                         </div>
 
-                        @foreach (config('translatable.locales') as $locale)
-                            <div class="form-group">
-                                <label>@lang('site.' . $locale . '.name')</label>
-                                <input type="text" name="{{ $locale }}[name]" class="form-control" value="{{ $product->name }}">
-                            </div>
+
 
                             <div class="form-group">
-                                <label>@lang('site.' . $locale . '.description')</label>
-                                <textarea name="{{ $locale }}[description]" class="form-control ckeditor">{{ $product->description }}</textarea>
+                                <label>@lang('site.description')</label>
+                                <textarea name="description" class="form-control ckeditor">{!! $product->description  !!}</textarea>
                             </div>
 
-                        @endforeach
+
 
                         <div class="form-group">
                             <label>@lang('site.image')</label>
-                            <input type="file" name="image" class="form-control image">
+                            <input multiple type="file" name="image[]" class="form-control image">
                         </div>
 
                         <div class="form-group">
-                            <img src="{{ $product->image_path }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+                            <img src="{{ $product->image_path }}"   style="width: 100px" class="img-thumbnail image-preview" alt="">
                         </div>
 
-                        <div class="form-group">
-                            <label>@lang('site.purchase_price')</label>
-                            <input type="number" name="purchase_price" step="0.01" class="form-control" value="{{ $product->purchase_price }}">
-                        </div>
 
                         <div class="form-group">
                             <label>@lang('site.sale_price')</label>
-                            <input type="number" name="sale_price" step="0.01" class="form-control" value="{{ $product->sale_price }}">
+                            <input type="number" name="price" step="0.01" class="form-control" value="{{ $product->price }}">
                         </div>
 
                         <div class="form-group">
                             <label>@lang('site.stock')</label>
-                            <input type="number" name="stock" class="form-control" value="{{ $product->stock}}">
+                            <input type="number" name="quantity" class="form-control" value="{{ $product->quantity}}">
                         </div>
 
                         <div class="form-group">

@@ -9,10 +9,12 @@ class Category extends Model
 {
     //
     protected $fillable = [
-        'name','image' 
-    ];
-    public function product(){
-        return $this->belongsTo('App\Product');
+'name','image'
+];
+
+    public function products()
+    {
+        return $this->hasMany('App\Product');
     }
 
     protected $append=['image_path'];
@@ -21,4 +23,5 @@ class Category extends Model
         return asset('public_uploads/categories_image'.$this->image);
 
     }
+
 }

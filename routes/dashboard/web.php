@@ -18,6 +18,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 
             //Roles Route
             Route::resource('roles', 'RoleController');
+            Route::resource('products','ProductController');
         });
     });
 });

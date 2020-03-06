@@ -51,7 +51,7 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\User_Type');
     }
-    public function products()
+    public function product()
     {
         return $this->hasMany('App\Product');
     }
