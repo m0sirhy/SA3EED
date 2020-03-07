@@ -1,73 +1,139 @@
-@extends('layouts.app')
 
+
+@extends('layouts.user_side.default')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <div class="tt-breadcrumb">
+        @include('includes.user_side.breedCrumb')
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    </div>
+    <div id="tt-pageContent" class="show_unavailable_variants">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+        <div class="container-indent">
+            <div class="container">
+                <h1 class="tt-title-subpages noborder">ALREADY REGISTERED?</h1>
+                <div class="tt-login-form">
+                    <div class="row">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="tt-item">
+                                <h2 class="tt-title">NEW CUSTOMER</h2>
+                                <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                                <div class="form-group">
+                                    <a href="{{ __('register') }}" class="btn btn-top btn-border">CREATE AN ACCOUNT</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="tt-item">
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                <div id="login">
+                                    <h2 class="tt-title">LOGIN</h2>
+                                    If you have an account with us, please log in.
+
+                                    <div class="form-default form-top">
+
+                                        <form  method="POST" action="{{ route('login') }}" id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login" />
+                                            <input type="hidden" name="utf8" value="✓" />
+                                            @csrf
+                                            <div class="tt-base-color">
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="loginInputName">{{ __('E-Mail Address') }} <sup>*</sup></label>
+                                                <div class="tt-required">* Required Fields</div>
+                                                <input type="email" name="customer[email]" class="form-control" id="loginInputName" placeholder="Enter E-mail">
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label for="loginInputEmail">{{ __('Password') }} <sup>*</sup></label>
+                                                <input type="password" value="" name="customer[password]" class="form-control" id="loginInputEmail" placeholder="Enter Password">
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-auto mr-auto">
+                                                    <div class="form-group">
+                                                        <button class="btn btn-border" type="submit"> {{ __('Login') }}</button>
+                                                        @if (Route::has('password.request'))
+
+                                                        @endif
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-auto align-self-end">
+                                                    <div class="form-group">
+                                                        <ul class="additional-links">
+                                                            <li><a href="#" onclick="showRecoverPasswordForm();return false;">Lost your password?</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div id="recover-password" style="display:none;" class="wrap">
+                                    <h2 class="tt-title">RESET PASSWORD</h2>
+                                    We will send you an email to reset your password.
+
+                                    <div class="form-default form-top">
+                                        <form method="post" action="https://wokiee-demos.myshopify.com/account/recover" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
+
+                                            <div class="tt-base-color">
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="loginInputName">E-MAIL <sup>*</sup></label>
+                                                <div class="tt-required">* Required Fields</div>
+                                                <input value="" name="email" class="form-control" id="loginInputName" placeholder="Enter E-mail" autocorrect="off" autocapitalize="off">
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-auto">
+                                                    <div class="form-group">
+                                                        <button class="btn btn-border" type="submit">SUBMIT</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto align-self-center">
+                                                    <div class="form-group">
+                                                        <ul class="additional-links">
+                                                            <li>&nbsp;or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            function showRecoverPasswordForm() {
+                document.getElementById('recover-password').style.display = 'block';
+                document.getElementById('login').style.display = 'none';
+            }
+
+            function hideRecoverPasswordForm() {
+                document.getElementById('recover-password').style.display = 'none';
+                document.getElementById('login').style.display = 'block';
+            }
+
+            if (window.location.hash == '#recover') {
+                showRecoverPasswordForm()
+            }
+        </script>
     </div>
-</div>
 @endsection

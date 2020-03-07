@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return view('user_side.index');
 });
+Route::get('/', 'ProductController@index');
+
 //This tow routes for testing purpose
 Route::get('/temp_login', function () {
     return view('user_side.account.login');

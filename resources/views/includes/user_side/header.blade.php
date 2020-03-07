@@ -1103,8 +1103,10 @@
                             </div>
                             <div class="tt-dropdown-inner">
                                 <ul>
-                                    <li><a href="account/login.html"><i class="icon-f-77"></i>Sign In</a></li>
-                                    <li><a href="account/register.html"><i class="icon-f-94"></i>Register</a></li>
+                                    <li><a class="nav-link" href="{{ route('login') }}"><i class="icon-f-77"></i>{{ __('Login') }}</a></li>
+
+                                    <li><a  class="nav-link" href="{{ route('register') }}"><i class="icon-f-94"></i>{{ __('Register') }}</a></li>
+
                                     <li><a href="cart.html"><i class="icon-f-39"></i>View Cart</a></li>
                                     <li><a href="pages/wishlist.html"><svg viewBox="0 0 16 15" fill="none"
                   xmlns="http://www.w3.org/2000/svg">

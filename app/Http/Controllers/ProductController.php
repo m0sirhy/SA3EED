@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,7 +14,8 @@ class ProductController extends Controller
     public function index()
     {
         //
-        return 'asfjh';
+        $latestproduct =product::latest()->get();
+        return  view('user_side.index', compact('latestproduct'));
     }
 
     /**
