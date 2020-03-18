@@ -22,7 +22,7 @@
                 <div class="box-header with-border">
 
                     <h3 class="box-title" style="margin-bottom: 15px">@lang('site.products')
-                        <small>{{ $errors->count() }}</small>
+                        <small>{{ $products->count() }}</small>
                     </h3>
 
                     <form action="{{ route('dashboard.products.index') }}" method="get">
@@ -60,7 +60,7 @@
 
                 <div class="box-body">
 
-                    @if ($errors->count() > 0)
+                    @if ($products->count() > 0)
 
                         <table class="table table-hover">
 
@@ -80,7 +80,7 @@
                             </thead>
 
                             <tbody>
-                            @foreach ($errors as $index=>$product)
+                            @foreach ($products as $index=>$product)
                                 <tr>
 
                                     <td>{{ $index + 1 }}</td>

@@ -23,7 +23,7 @@ class ProductController extends Controller
         $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
         $this->middleware('permission:product-create', ['only' => ['create','store']]);
-        $this->middleware('permission:productح-edit', ['only' => ['edit','update']]);
+        $this->middleware('permission:product-edit', ['only' => ['edit','update']]);
     }
 
     /**
