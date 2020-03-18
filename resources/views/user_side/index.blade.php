@@ -342,17 +342,9 @@
                             </div>
                             <div class="tt-product-inside-hover">
                                 <div class="tt-row-btn">
-                                    <form action="/cart/add" method="post" enctype="multipart/form-data">
-                                        <input type="hidden" name="id" value="14334868783162">
-                                        <button class="tt-btn-addtocart addtocart-item-js thumbprod-button-bg" data-relatedcollection="for-womens">
-
-
-                                            <span class="icon icon-shopping_basket"></span> <span>ADD TO CART</span>
-
-
-                                        </button>
-                                    </form>
+                                 <a href="{{'/discraption/'.$product->id}}" class="btn btn-lg btn-addtocart addtocart-js">Discraption</a>
                                 </div>
+
                                 <div class="tt-row-btn">
                                     <a href="#" data-toggle="modal" data-target="#ModalquickView" class="tt-btn-quickview" data-value="/collections/trending/products/copy-of-woven-shield-sunglasses" data-quantity="14334868783162-continue0;14334868750394-continue0;14334868717626-continue200;14334868815930-0;14334868848698-continue0;"
                                         data-optionimages="{&quot;Blue&quot;:&quot;{{asset('user_side/files/1/0130/5041/3114/products/Faxon_Canvas_Low-Top_Sneaker_1_8a94289f-c9c8-4e47-afa1-c436717fc271_1600x30a3.jpg')}}?v=1542308378&quot;,&quot;Light Blue&quot;:&quot;{{asset('user_side/files/1/0130/5041/3114/products/Premier_Cropped_Skinny_Jean_5_0b8a2869-d963-44f2-8d54-f09ce9129dc0_100x.jpg')}}?v=1542308378&quot;,&quot;Green&quot;:&quot;{{asset('user_side/files/1/0130/5041/3114/products/Premier_Cropped_Skinny_Jean_1_b52abad7-0a12-4802-9751-e696c4c9990f_100x.jpg')}}?v=1542308378&quot;,&quot;Pink&quot;:&quot;{{asset('user_side/files/1/0130/5041/3114/products/Premier_Cropped_Skinny_Jean_9_65f49ef0-8cf6-4ec6-b1cc-3b61b85b48eb_100x.jpg')}}?v=1542308378&quot;,&quot;Orange&quot;:&quot;{{asset('user_side/files/1/0130/5041/3114/products/Premier_Cropped_Skinny_Jean_17_45345631-b609-4161-8b5d-9b171ef1de3e_100x.jpg')}}?v=1542308378&quot;}"

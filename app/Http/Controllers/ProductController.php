@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\product;
+
+
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,11 +15,18 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
         $latestproduct =product::latest()->get();
         return  view('user_side.index', compact('latestproduct'));
     }
 
+
+
+    public function discraption($id)
+    {
+      $products =product::find($id);
+  return  view('user_side.products_discrabtion', compact('products'));
+
+    }
     /**
      * Show the form for creating a new resource.
      *
