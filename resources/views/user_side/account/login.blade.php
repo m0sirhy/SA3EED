@@ -30,8 +30,8 @@
                                 If you have an account with us, please log in.
 
                                 <div class="form-default form-top">
-                                    <form method="post" action="https://wokiee-demos.myshopify.com/account/login" id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
-
+                                    <form method="post" action="{{ route('login') }}" id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
+@csrf
                                         <div class="tt-base-color">
 
                                         </div>

@@ -15,8 +15,8 @@
                         <div class="tt-item">
                             <h2 class="tt-title">PERSONAL INFORMATION</h2>
                             <div class="form-default">
-                                <form method="post" action="https://wokiee-demos.myshopify.com/account" id="create_customer" accept-charset="UTF-8"><input type="hidden" name="form_type" value="create_customer" /><input type="hidden" name="utf8" value="✓" />
-
+                                <form method="post" action="{{ route('register') }} id="create_customer" accept-charset="UTF-8"><input type="hidden" name="form_type" value="create_customer" /><input type="hidden" name="utf8" value="✓" />
+                                     @csrf
                                     <div class="tt-base-color">
 
                                     </div>
@@ -32,11 +32,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="loginInputEmail">Email <sup>*</sup></label>
-                                        <input type="email" name="customer[email]" class="form-control" id="loginInputEmail" placeholder="Enter Email">
+                                        <input type="email" name="email" class="form-control" id="loginInputEmail" placeholder="Enter Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="loginInputPassword">Password <sup>*</sup></label>
-                                        <input type="password" name="customer[password]" class="form-control" id="loginInputPassword" placeholder="Enter Password">
+                                        <input type="password" name="password" class="form-control" id="loginInputPassword" placeholder="Enter Password">
                                     </div>
                                     <div class="row">
                                         <div class="col-auto">
