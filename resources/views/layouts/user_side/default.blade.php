@@ -7,6 +7,10 @@
 <head>
 
     @include('includes.user_side.head')
+
+     <script defer src="{{ mix('js/app.js') }}"></script>
+  <script defer src="{{ mix('js/posts.js') }}" data-turbolinks-track="true"></script>
+  <link href="{{mix('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">
 </head>
 
 <body>
@@ -279,9 +283,10 @@ right: 10px !important;
 -->
         
     </style>
+  
     <script>
         // <![CDATA[
-        window.addEventListener('DOMContentLoaded', function() {
+         $(document).on('turbolinks:load',function() {
                 $('.tt-box-copyright').length && $('.tt-box-copyright').html('© Wokiee 2020. All Rights Reserved');
             })
             // ]]>
