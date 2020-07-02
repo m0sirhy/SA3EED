@@ -8,9 +8,8 @@
 
     @include('includes.user_side.head')
 
-     <script defer src="{{ mix('js/app.js') }}"></script>
-  <script defer src="{{ mix('js/posts.js') }}" data-turbolinks-track="true"></script>
-  <link href="{{mix('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">
+     <script defer src="{{ asset('js/app.js') }}"></script>
+  <link href="{{asset('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">
 </head>
 
 <body>
