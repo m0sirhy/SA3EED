@@ -32,7 +32,7 @@
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 
-                        
+
                         <div class="form-group">
                             <label>@lang('site.user_name')</label>
                             <input type="text" name="user_name" class="form-control" value="{{ $user->user_name }}">
@@ -66,24 +66,24 @@
                             <div class="nav-tabs-custom">
 
                                 @php
-                                    $roles = ['user'];
+                                   $models=['user','category','product'];
                                     $permissions = ['create', 'list', 'edit', 'delete'];
                                 @endphp
 
                                 <ul class="nav nav-tabs">
-                                    @foreach ($roles as $index=>$role)
-                                        <li class="{{ $index == 0 ? 'active' : '' }}"><a href="#{{ $role }}" data-toggle="tab">@lang('site.' . $role)</a></li>
+                                    @foreach ($models as $index=>$model)
+                                        <li class="{{ $index == 0 ? 'active' : '' }}"><a href="#{{ $model }}" data-toggle="tab">@lang('site.' . $model)</a></li>
                                     @endforeach
                                 </ul>
 
                                 <div class="tab-content">
 
-                                    @foreach ($roles as $index=>$role)
+                                    @foreach ($models as $index=>$model)
 
-                                        <div class="tab-pane {{ $index == 0 ? 'active' : '' }}" id="{{ $role }}">
+                                        <div class="tab-pane {{ $index == 0 ? 'active' : '' }}" id="{{ $model }}">
 
                                             @foreach ($permissions as $permission)
-                                            <label><input type="checkbox" {{ $user->hasPermissionTo($role.'-'.$permission) ?  'checked' : '' }}  name="permissions[]"value="{{ $role . '-' . $permission }}"> @lang('site.' . $permission)</label>
+                                            <label><input type="checkbox" {{ $user->hasPermissionTo($model.'-'.$permission) ?  'checked' : '' }}  name="permissions[]"value="{{ $model . '-' . $permission }}"> @lang('site.' . $permission)</label>
                                             @endforeach
 
                                         </div>

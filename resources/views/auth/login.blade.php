@@ -43,13 +43,13 @@
                                             <div class="form-group">
                                                 <label for="loginInputName">{{ __('E-Mail Address') }} <sup>*</sup></label>
                                                 <div class="tt-required">* Required Fields</div>
-                                                <input type="email" name="customer[email]" class="form-control" id="loginInputName" placeholder="Enter E-mail">
+                                                <input type="email" name="email" class="form-control" id="loginInputName" placeholder="Enter E-mail">
                                             </div>
 
 
                                             <div class="form-group">
                                                 <label for="loginInputEmail">{{ __('Password') }} <sup>*</sup></label>
-                                                <input type="password" value="" name="customer[password]" class="form-control" id="loginInputEmail" placeholder="Enter Password">
+                                                <input type="password" value="" name="password" class="form-control" id="loginInputEmail" placeholder="Enter Password">
                                             </div>
 
 
@@ -83,7 +83,7 @@
                                     We will send you an email to reset your password.
 
                                     <div class="form-default form-top">
-                                        <form method="post" action="https://wokiee-demos.myshopify.com/account/recover" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
+                                        <form method="post" action="#" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
 
                                             <div class="tt-base-color">
 

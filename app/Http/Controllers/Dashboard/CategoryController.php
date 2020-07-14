@@ -52,12 +52,12 @@ class CategoryController extends Controller
             $images = $request->file('image');
                   //The Hahs Used to prevent duplicates
         $imagename= time().'.'.$images->hashName();
-     
+
         $img = Image::make($images);
    // resize the image to a width of 160 and constrain aspect ratio (auto height)
         /*->resize(160, null, function ($constraint) {
                                                  $constraint->aspectRatio();
-                                                        
+
                                                 });
 */
                 // now you are able to resize the instance
@@ -71,7 +71,7 @@ class CategoryController extends Controller
                       $request_data['image']=  $imagename;
 
               }
-        
+
         Category::create($request_data);
         session()->flash('success','site.add_successfully');
 return redirect()->route('dashboard.categories.index');
@@ -113,7 +113,7 @@ return redirect()->route('dashboard.categories.index');
     {
         //
         $request_data=$request->except(['image']);
-
+        if ($request->image) {
         if($category->image != 'default.png'){
             $image=$request->file('image');
             $imagename=time().'.'.$image->hashName();
@@ -121,6 +121,7 @@ return redirect()->route('dashboard.categories.index');
             $image->save(public_path('uploads/categories_images/'.$imagename));
 
             $request_data['image']=$imagename;
+        }
         }
 
         $category->update($request_data);
