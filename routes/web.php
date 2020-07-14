@@ -28,6 +28,15 @@ Route::get('/temp_register', function () {
     return view('user_side.account.register');
 });
 
+Route::get('/pr', function () {
+    return view('user_side.product');
+});
+
+
+Route::get('/cat', function () {
+    return view('user_side.category');
+});
+
 
 
 Auth::routes();
