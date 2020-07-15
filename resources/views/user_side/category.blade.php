@@ -1,9 +1,10 @@
 @extends('layouts.user_side.default')
 @section('content')
-<div class="tt-breadcrumb">
-    @include('includes.user_side.breedCrumb')
+    <div class="tt-breadcrumb">
+        @include('includes.user_side.breedCrumb')
 
-</div>	<div class="container-indent">
+    </div>
+    <div class="container-indent">
     <div class="container">
         <div class="row flex-sm-row-reverse">
             <div class="col-md-4 col-lg-3 col-xl-3 leftColumn rightColumn aside">
@@ -101,7 +102,7 @@
                             <li><a class="options-color tt-color-bg-18" href="#"></a></li>
                             <li><a class="options-color" href="#">
 									<span class="swatch-img">
-										<img src="images/custom/texture-img-01.jpg" alt="">
+										<img src="{{ asset('user_side/images/custom/texture-img-01.jpg') }}" alt="">
 									</span>
                                     <span class="swatch-label color-black"></span>
                                 </a></li>
@@ -127,8 +128,8 @@
                         <div class="tt-aside">
                             <a class="tt-item" href="#">
                                 <div class="tt-img">
-                                    <span class="tt-img-default"><img src="images/product/product-01.jpg" alt=""></span>
-                                    <span class="tt-img-roll-over"><img src="images/product/product-01-02.jpg" alt=""></span>
+                                    <span class="tt-img-default"><img src="{{ asset('user_side/images/product/product-01.jpg') }}" alt=""></span>
+                                    <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/product/product-01-02.jpg') }}" alt=""></span>
                                 </div>
                                 <div class="tt-content">
                                     <h6 class="tt-title">Flared Shift Dress</h6>
@@ -140,8 +141,8 @@
                             </a>
                             <a class="tt-item" href="#">
                                 <div class="tt-img">
-                                    <span class="tt-img-default"><img src="images/product/product-02.jpg" alt=""></span>
-                                    <span class="tt-img-roll-over"><img src="images/product/product-02-02.jpg" alt=""></span>
+                                    <span class="tt-img-default"><img src="{{ asset('user_side/images/product/product-02.jpg') }}" alt=""></span>
+                                    <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/product/product-02-02.jpg') }}" alt=""></span>
                                 </div>
                                 <div class="tt-content">
                                     <h6 class="tt-title">Flared Shift Dress</h6>
@@ -153,8 +154,8 @@
                             </a>
                             <a class="tt-item" href="#">
                                 <div class="tt-img">
-                                    <span class="tt-img-default"><img src="images/product/product-03.jpg" alt=""></span>
-                                    <span class="tt-img-roll-over"><img src="images/product/product-03-02.jpg" alt=""></span>
+                                    <span class="tt-img-default"><img src="{{ asset('user_side/images/product/product-03.jpg') }}" alt=""></span>
+                                    <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/product/product-03-02.jpg') }}" alt=""></span>
                                 </div>
                                 <div class="tt-content">
                                     <h6 class="tt-title">Flared Shift Dress</h6>
@@ -191,7 +192,7 @@
                 </div>
                 <div class="tt-content-aside">
                     <a href="listing-left-column.html" class="tt-promo-03">
-                        <img src="images/custom/listing_promo_img_07.jpg" alt="">
+                        <img src="{{ asset('user_side/images/custom/listing_promo_img_07.jpg') }}" alt="">
                     </a>
                 </div>
             </div>
@@ -233,8 +234,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-18.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-18-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-18.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-18-01.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -274,8 +275,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-05.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-05-02.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-05.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-05-02.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -315,8 +316,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-01.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-01-02.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-01.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-01-02.jpg') }}" alt=""></span>
                                     </a>
                                     <div class="tt-countdown_box">
                                         <div class="tt-countdown_inner">
@@ -376,8 +377,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-45.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-45-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-45.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-45-01.jpg') }}" alt=""></span>
                                     </a>
                                     <div class="tt-countdown_box">
                                         <div class="tt-countdown_inner">
@@ -437,8 +438,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-14.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-14-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-14.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-14-01.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -478,8 +479,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-15.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-15-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-15.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-15-01.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -520,8 +521,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-08.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-08-02.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-08.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-08-02.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -561,8 +562,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-28.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-28-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-28.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-28-01.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -608,8 +609,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-19.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-19-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-19.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-19-01.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -650,8 +651,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-25.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-25-01.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-25.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-25-01.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -691,8 +692,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-22.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-22-02.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-22.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-22-02.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -732,8 +733,8 @@
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
                                     <a href="#">
-                                        <span class="tt-img"><img src="images/loader.svg" data-src="images/product/product-23.jpg" alt=""></span>
-                                        <span class="tt-img-roll-over"><img src="images/loader.svg" data-src="images/product/product-23-02.jpg" alt=""></span>
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-23.jpg') }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/product/product-23-02.jpg') }}" alt=""></span>
                                     </a>
                                 </div>
                                 <div class="tt-description">
@@ -785,5 +786,4 @@
         </div>
     </div>
 </div>
-</div>
-        @endsection
+@endsection

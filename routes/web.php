@@ -28,13 +28,21 @@ Route::get('/temp_register', function () {
     return view('user_side.account.register');
 });
 
+// again !! This tow routes for testing purpose
 Route::get('/pr', function () {
     return view('user_side.product');
 });
 
 
+Route::get('/cats', function () {
+    return view('user_side.categories');
+});
 Route::get('/cat', function () {
     return view('user_side.category');
+});
+
+Route::get('/my_pr', function () {
+    return view('user_side.my_products');
 });
 
 

@@ -46,7 +46,7 @@
 {{--product scripts--}}
 
 <script src="{{ asset('user_side/external/elevatezoom/jquery.elevatezoom.js') }}"></script>
-
+<script src="{{ asset('user_side/external/panelmenu/panelmenu.js') }}"></script>
 <script src="{{ asset('user_side/external/slick/slick.min.js') }}"></script>
 <script src="{{ asset('user_side/external/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
 <script src="{{ asset('user_side/external/panelmenu/panelmenu.js') }}"></script>
