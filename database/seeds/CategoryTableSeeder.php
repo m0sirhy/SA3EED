@@ -13,7 +13,9 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         //
-for( $i=0;$i<=20;$i++){
+        $cats []=['اجهزة - الكترونيات','جوالات - تابلت ','عقارات للايجار ','ازياء - موضة نسائية ','حيوانات '];
+
+        for( $i=0;$i<=20;$i++){
         $category = Category::create([
             'name' => 'Category' . Str::random('1'),
             'image' => 'default.png',

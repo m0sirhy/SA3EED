@@ -44,6 +44,10 @@ Route::get('/cat', function () {
 Route::get('/my_pr', function () {
     return view('user_side.my_products');
 });
+Route::get('/my_store', function () {
+    return view('user_side.my_store');
+});
+
 
 
 

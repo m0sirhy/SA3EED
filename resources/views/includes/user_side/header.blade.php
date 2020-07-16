@@ -3,12 +3,12 @@
     <nav class="panel-menu mobile-main-menu mm-right">
         <ul>
             <li>
-                <a href="index.html">HOME</a>
+                <a href="/">HOME</a>
                 <ul>
                     <li>
-                        <a href="index.html">HOME STYLES</a>
+                        <a href="/">HOME STYLES</a>
                         <ul>
-                            <li><a href="index.html">Home — Example 1 <span class="tt-badge tt-fatured">Popular</span></a></li>
+                            <li><a href="/">Home — Example 1 <span class="tt-badge tt-fatured">Popular</span></a></li>
                             <li><a href="index-02.html">Home — Example 2</a></li>
                             <li><a href="index-03.html">Home — Example 3</a></li>
                             <li><a href="index-04.html">Home — Example 4 <span class="tt-badge tt-fatured">Popular</span></a></li>
@@ -20,7 +20,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="index.html">HOME STYLES</a>
+                        <a href="/">HOME STYLES</a>
                         <ul>
                             <li><a href="index-10.html">Home — Example 10</a></li>
                             <li><a href="index-11.html">Home — Example 11</a></li>
@@ -34,7 +34,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="index.html">HOME SKINS <span class="tt-badge tt-sale">HOT</span></a>
+                        <a href="/">HOME SKINS <span class="tt-badge tt-sale">HOT</span></a>
                         <ul>
                             <li><a href="index-skin-snowboards.html">Snowboards Shop <span class="tt-badge tt-fatured">Popular</span></a></li>
                             <li><a href="index-skin-phones.html">Phones Shop <span class="tt-badge tt-fatured">Popular</span></a></li>
@@ -423,7 +423,7 @@
             <div class="row">
                 <div class="tt-logo-container">
                     <!-- mobile logo -->
-                    <a class="tt-logo tt-logo-alignment" href="index.html"><img src="images/custom/logo.png" alt=""></a>
+                    <a class="tt-logo tt-logo-alignment" href="/"><img src="{{ asset('user_side/images/custom/logo.png') }}" alt=""></a>
                     <!-- /mobile logo -->
                 </div>
             </div>
@@ -435,7 +435,7 @@
             <div class="tt-header-holder">
                 <div class="tt-col-obj tt-obj-logo">
                     <!-- logo -->
-                    <a class="tt-logo tt-logo-alignment" href="index.html"><img src="images/custom/logo.png" alt=""></a>
+                    <a class="tt-logo tt-logo-alignment" href="/"><img src="{{ asset('user_side/images/custom/logo.png') }}" alt=""></a>
                     <!-- /logo -->
                 </div>
                 <div class="tt-col-obj tt-obj-menu">
@@ -445,13 +445,13 @@
                             <nav>
                                 <ul>
                                     <li class="dropdown tt-megamenu-col-02 selected">
-                                        <a href="index.html">HOME</a>
+                                        <a href="/">HOME</a>
                                         <div class="dropdown-menu">
                                             <div class="row tt-col-list">
                                                 <div class="col">
-                                                    <h6 class="tt-title-submenu"><a href="index.html">HOME STYLES</a></h6>
+                                                    <h6 class="tt-title-submenu"><a href="/">HOME STYLES</a></h6>
                                                     <ul class="tt-megamenu-submenu">
-                                                        <li><a href="index.html">Home — Example 1
+                                                        <li><a href="/">Home — Example 1
                                                                 <img src="images/loader.svg" data-src="images/custom/tt-layout-img-01.png" alt="Example 1">
                                                                 <span class="tt-badge tt-fatured">Popular</span>
                                                             </a></li>
@@ -469,7 +469,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="col">
-                                                    <h6 class="tt-title-submenu"><a href="index.html">HOME STYLES</a></h6>
+                                                    <h6 class="tt-title-submenu"><a href="/">HOME STYLES</a></h6>
                                                     <ul class="tt-megamenu-submenu">
                                                         <li><a href="index-10.html">Home — Example 10 <img  src="images/loader.svg" data-src="images/custom/tt-layout-img-10.png" alt="Example 10"></a></li>
                                                         <li><a href="index-11.html">Home — Example 11 <img  src="images/loader.svg" data-src="images/custom/tt-layout-img-11.png" alt="Example 11"></a></li>

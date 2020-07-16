@@ -42,7 +42,14 @@
 
 
 <script src="{{ asset('user_side/external/jquery/jquery.min.js') }}"></script>
+
 <script src="{{ asset('user_side/external/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('user_side/external/bootstrap-datepicker/bootstrap-datepicker.js') }}"></script>
+{{-- store scripts--}}
+<script src="{{ asset('user_side/external/panelmenu/panelmenu.js') }}"></script>
+<script src="{{ asset('user_side/external/isotope/imagesloaded.js') }}"></script>
+<script src="{{ asset('user_side/external/isotope/isotope.pkgd.min.js') }}"></script>
+
 {{--product scripts--}}
 
 <script src="{{ asset('user_side/external/elevatezoom/jquery.elevatezoom.js') }}"></script>
