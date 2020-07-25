@@ -1244,7 +1244,7 @@
                         </div>
                     </div>
                     <!-- /tt-account -->
-                    <!-- tt-langue and tt-currency -->
+                    <!-- tt-langue  -->
                     <div class="tt-desctop-parent-multi tt-parent-box">
                         <div class="tt-multi-obj tt-dropdown-obj">
                             <button class="tt-dropdown-toggle"><i class="icon-f-79"></i></button>
@@ -1254,21 +1254,19 @@
                                 </div>
                                 <div class="tt-dropdown-inner">
                                     <ul>
-                                        <li class="active"><a href="#">English</a></li>
-                                        <li><a href="#">Deutsch</a></li>
-                                        <li><a href="#">Español</a></li>
-                                        <li><a href="#">Français</a></li>
+                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                            <li>
+                                                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                    {{ $properties['native'] }}
+                                                </a>
+                                        @endforeach
                                     </ul>
-                                    <ul>
-                                        <li class="active"><a href="#"><i class="icon-h-59"></i>USD - US Dollar</a></li>
-                                        <li><a href="#"><i class="icon-h-60"></i>EUR - Euro</a></li>
-                                        <li><a href="#"><i class="icon-h-61"></i>GBP - British Pound Sterling</a></li>
-                                    </ul>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /tt-langue and tt-currency -->
+                    <!-- /tt-langue  -->
                 </div>
             </div>
         </div>

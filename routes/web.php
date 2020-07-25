@@ -11,55 +11,56 @@
 |
 */
 
-Route::get('/', function () {
-    return view('user_side.index');
-});
-Route::get('/', 'ProductController@index');
 
-Route::get('/discraption/{id}', 'ProductController@discraption');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+
+    Route::get('/', function () {
+        return view('user_side.index');
+    });
+    Route::get('/', 'ProductController@index');
+
+    Route::get('/discraption/{id}', 'ProductController@discraption');
 
 
 //This tow routes for testing purpose
-Route::get('/temp_login', function () {
-    return view('user_side.account.login');
-});
+    Route::get('/temp_login', function () {
+        return view('user_side.account.login');
+    });
 
-Route::get('/temp_register', function () {
-    return view('user_side.account.register');
-});
+    Route::get('/temp_register', function () {
+        return view('user_side.account.register');
+    });
 
 // again !! This tow routes for testing purpose
-Route::get('/pr', function () {
-    return view('user_side.product');
-});
+    Route::get('/pr', function () {
+        return view('user_side.product');
+    });
 
 
-Route::get('/cats', function () {
-    return view('user_side.categories');
-});
-Route::get('/cat', function () {
-    return view('user_side.category');
-});
+    Route::get('/cats', function () {
+        return view('user_side.categories');
+    });
+    Route::get('/cat', function () {
+        return view('user_side.category');
+    });
 
-Route::get('/my_pr', function () {
-    return view('user_side.my_products');
-});
-Route::get('/my_store', function () {
-    return view('user_side.my_store');
-});
-
-
+    Route::get('/my_pr', function () {
+        return view('user_side.my_products');
+    });
+    Route::get('/my_store', function () {
+        return view('user_side.my_store');
+    });
 
 
-Auth::routes();
+    Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
 // Route::resource('user','UserController');
 
-Route::resource('product','ProductController');
-Route::resource('category','CategoryController');
-Route::resource('tag','TagController');
-Route::resource('favorite','favoriteController');
+    Route::resource('product', 'ProductController');
+    Route::resource('category', 'CategoryController');
+    Route::resource('tag', 'TagController');
+    Route::resource('favorite', 'favoriteController');
 
-
+});
 
