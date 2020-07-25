@@ -21,12 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30c6cfb4-9146-4bd9-9437-3db7d8c9fd8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/user_side/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/user_side/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/user_side/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/user_side/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user_side/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user_side/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/laravellocalization.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/laravellocalization.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +209,7 @@
       <workItem from="1594905120764" duration="3614000" />
       <workItem from="1595023370061" duration="12000" />
       <workItem from="1595683112992" duration="75000" />
-      <workItem from="1595683227026" duration="2217000" />
+      <workItem from="1595683227026" duration="3057000" />
     </task>
     <servers />
   </component>
@@ -245,10 +241,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1595023385694" />
-    <state x="529" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594739449845">
+    <state x="529" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595685921940">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="529" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1594739449845" />
+    <state x="529" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.860@0.0.1440.860" timestamp="1595685921940" />
     <state x="426" y="29" width="587" height="801" key="find.popup" timestamp="1594739383654">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
