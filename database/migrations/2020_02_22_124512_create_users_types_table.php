@@ -29,6 +29,6 @@ class CreateUsersTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user__types');
+        Schema::dropIfExists('users_types');
     }
 }

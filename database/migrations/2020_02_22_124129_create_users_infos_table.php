@@ -35,6 +35,6 @@ class CreateUsersInfosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user__infos');
+        Schema::dropIfExists('users_infos');
     }
 }

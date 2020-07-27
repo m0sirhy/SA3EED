@@ -14,7 +14,7 @@
                     <div class="tt-item">
                         <h2 class="tt-title">PERSONAL INFORMATION</h2>
                         <div class="form-default">
-                            <form id="contactform" method="post" action="{{ route('register') }}" novalidate="novalidate">
+                            <form  method="post" action="{{ route('register') }}" novalidate="novalidate">
                             @csrf
                                 <div class="form-group">
                                     <label for="loginInputName">FIRST NAME *</label>
@@ -39,7 +39,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="loginInputPassword">PASSWORD *</label>
-                                    <input type="text" name="passowrd" class="form-control @error('password') is-invalid @enderror" id="loginInputPassword" placeholder="Enter Password">
+                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="loginInputPassword" placeholder="Enter Password">
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group ">
+                                    <label for="password-confirm">{{ __('Confirm Password') }}</label>
+
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"   placeholder="Enter Password" required>
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
