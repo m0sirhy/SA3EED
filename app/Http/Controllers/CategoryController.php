@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Product;
-
 
 use Illuminate\Http\Request;
-
-class ProductController extends Controller
+use App\Category;
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,19 +13,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-
-        return view('user_side.product');
-
-    }
-
-
-
-    public function discraption($id)
-    {
-      $products =product::find($id);
-  return  view('user_side.products_discrabtion', compact('products'));
+        //
+        $category=Category::get();
+        return view('user_side.categories',compact($category));
 
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -58,7 +49,7 @@ class ProductController extends Controller
     public function show($id)
     {
         //
-        return view('user_side.product');
+        return view('user_side.category');
 
     }
 

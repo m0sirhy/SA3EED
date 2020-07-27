@@ -107,78 +107,29 @@
                 <div class="row tt-layout-promo-box">
                     <div class="col-sm-12 col-md-6">
                         <div class="row">
+                            @foreach($categories as $category)
+
                             <div class="col-sm-6">
-                                <a href="listing-left-column.html" class="tt-promo-box tt-one-child hover-type-2">
+
+                                <a href="/category/{{$category->id}}" class="tt-promo-box tt-one-child hover-type-2">
                                     <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-01.jpg') }}" alt="">
                                     <div class="tt-description">
                                         <div class="tt-description-wrapper">
                                             <div class="tt-background"></div>
-                                            <div class="tt-title-small">SALE</div>
+                                            <div class="tt-title-small">{{$category->name}}</div>
                                         </div>
                                     </div>
                                 </a>
-                                <a href="listing-left-column.html" class="tt-promo-box tt-one-child hover-type-2">
-                                    <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-02.jpg') }}" alt="">
-                                    <div class="tt-description">
-                                        <div class="tt-description-wrapper">
-                                            <div class="tt-background"></div>
-                                            <div class="tt-title-small">NEW</div>
-                                        </div>
-                                    </div>
-                                </a>
+
                             </div>
-                            <div class="col-sm-6">
-                                <a href="listing-left-column.html" class="tt-promo-box tt-one-child hover-type-2">
-                                    <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-03.jpg') }}" alt="">
-                                    <div class="tt-description">
-                                        <div class="tt-description-wrapper">
-                                            <div class="tt-background"></div>
-                                            <div class="tt-title-small">WOMEN</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                            @endforeach
+
+
 
 
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a href="listing-left-column.html" class="tt-promo-box tt-one-child hover-type-2">
-                                    <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-04.jpg') }}" alt="">
-                                    <div class="tt-description">
-                                        <div class="tt-description-wrapper">
-                                            <div class="tt-background"></div>
-                                            <div class="tt-title-small">MEN</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a href="listing-left-column.html" class="tt-promo-box tt-one-child hover-type-2">
-                                    <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-05.jpg') }}" alt="">
-                                    <div class="tt-description">
-                                        <div class="tt-description-wrapper">
-                                            <div class="tt-background"></div>
-                                            <div class="tt-title-small">ACCESSORIES</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-12">
-                                <a href="listing-left-column.html" class="tt-promo-box tt-one-child">
-                                    <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-06.jpg') }}" alt="">
-                                    <div class="tt-description">
-                                        <div class="tt-description-wrapper">
-                                            <div class="tt-background"></div>
-                                            <div class="tt-title-small">SHOES</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
