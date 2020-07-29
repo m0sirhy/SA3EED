@@ -38,7 +38,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
 // Route::resource('user','UserController');
 
     Route::resource('product', 'ProductController');
-    Route::resource('category', 'CategoryController');
+    Route::resource('category', 'CategoryController')->only([
+        'index', 'show'
+    ]);
     Route::resource('tag', 'TagController');
     Route::resource('favorite', 'favoriteController');
 

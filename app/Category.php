@@ -23,7 +23,7 @@ class Category extends Model
     protected $append=['image_path'];
 
     public Function getImagePathAttribute(){
-        return asset('public_uploads/categories_image'.$this->image);
+        return asset('uploads/categories_images/'.$this->image);
 
     }
 

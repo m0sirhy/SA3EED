@@ -13,8 +13,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+//        $products =product::when($request->category_id, function ($q) use ($request) {
+//
+//        return $q->where('category_id', $request->category_id);
+//
+//    })->latest();
 
         return view('user_side.product');
 

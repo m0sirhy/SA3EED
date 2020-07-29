@@ -16,8 +16,9 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $category=Category::get();
-        return view('user_side.categories',compact($category));
+        $categories=Category::get();
+
+        return view('user_side.categories',compact('categories'));
 
     }
 
