@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use Cviebrock\EloquentSluggable\Services\SlugService;
+
 class CategoryController extends Controller
 {
     /**
@@ -46,10 +48,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         //
-        return view('user_side.category');
+        $category = Category::whereSlug($slug)->first();
+        return view('user_side.category',compact('category'));
 
     }
 

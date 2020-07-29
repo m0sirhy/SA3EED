@@ -13,6 +13,7 @@
 
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+    Auth::routes();
 
     Route::get('/', 'LandingController@index');
 
@@ -31,7 +32,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     });
 
 
-    Auth::routes();
+
 
     Route::get('/home', 'HomeController@index')->name('home');
 // Route::resource('user','UserController');

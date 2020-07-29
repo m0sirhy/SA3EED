@@ -111,7 +111,7 @@
 
                             <div class="col-sm-6">
 
-                                <a href="/category/{{$category->id}}" class="tt-promo-box tt-one-child hover-type-2">
+                                <a href="{{route('category.show',$category->slug)}}" class="tt-promo-box tt-one-child hover-type-2">
                                     <img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ asset('user_side/images/promo/index-promo-img-01.jpg') }}" alt="">
                                     <div class="tt-description">
                                         <div class="tt-description-wrapper">
