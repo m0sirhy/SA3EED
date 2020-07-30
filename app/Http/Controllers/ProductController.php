@@ -60,10 +60,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
         //
-        return view('user_side.product');
+        $related= Product::where('category_id', '=', $product->category->id)
+            ->where('id', '!=', $product->id)
+            ->get();
+        return view('user_side.product',compact('product','related'));
 
     }
 

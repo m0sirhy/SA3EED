@@ -201,7 +201,7 @@
                 <div class="content-indent container-fluid-custom-mobile-padding-02">
                     <div class="tt-filters-options">
                         <h1 class="tt-title">
-                            WOMEN <span class="tt-title-total">(69)</span>
+                          {{$category->name}}<span class="tt-title-total">({{$category->products->count()}})</span>
                         </h1>
                         <div class="tt-btn-toggle">
                             <a href="#">FILTER</a>
@@ -236,12 +236,12 @@
                                     <a href="#" class="tt-btn-quickview" data-toggle="modal" data-target="#ModalquickView"	data-tooltip="Quick View" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
                                     <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
-                                    <a href="#">
+                                    <a href="{{route('product.show',$product->id)}}">
                                         @foreach($product->productimages as $image)
+                                            <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $image->image_path }}" alt=""></span>
 
                                         <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $image->image_path }}" alt=""></span>
                                         @endforeach
-{{--                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $image->image_path }}" alt=""></span>--}}
 
                                     </a>
                                 </div>
@@ -258,7 +258,7 @@
                                             <i class="icon-star"></i>
                                         </div>
                                     </div>
-                                    <h2 class="tt-title"><a href="#">{{$product->title}}</a></h2>
+                                    <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
                                     <div class="tt-price">
                                         {{$product->price}}
                                     </div>
