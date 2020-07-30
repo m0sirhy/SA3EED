@@ -43,12 +43,10 @@
                         </h4>
                         <div class="tt-collapse-content">
                             <ul class="tt-list">
-                                <li><a href="listing-collection.html">Women</a></li>
-                                <li><a href="listing-collection.html">Men</a></li>
-                                <li><a href="listing-collection.html">Accessories</a></li>
-                                <li><a href="listing-collection.html">Shoes</a></li>
-                                <li><a href="listing-collection.html">New Arrivals</a></li>
-                                <li><a href="listing-collection.html">Clearence</a></li>
+                                @foreach(App\Category::take(4)->get() as $category)
+                                <li><a href="{{route('category.show',$category->slug)}}">{{$category->name}}</a></li>
+
+                                @endforeach
                             </ul>
                         </div>
                     </div>

@@ -68,48 +68,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="tt-collapse open">
-                    <h3 class="tt-collapse-title">FILTER BY SIZE</h3>
-                    <div class="tt-collapse-content">
-                        <ul class="tt-options-swatch options-middle">
-                            <li><a href="#">4</a></li>
-                            <li class="active"><a href="#">6</a></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">10</a></li>
-                            <li><a href="#">12</a></li>
-                            <li><a href="#">14</a></li>
-                            <li><a href="#">16</a></li>
-                            <li><a href="#">18</a></li>
-                            <li><a href="#">20</a></li>
-                            <li><a href="#">22</a></li>
-                            <li><a href="#">24</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tt-collapse open">
-                    <h3 class="tt-collapse-title">FILTER BY COLOR</h3>
-                    <div class="tt-collapse-content">
-                        <ul class="tt-options-swatch options-middle">
-                            <li><a class="options-color tt-border tt-color-bg-08" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-09" href="#"></a></li>
-                            <li class="active"><a class="options-color tt-color-bg-10" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-11" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-12" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-13" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-14" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-15" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-16" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-17" href="#"></a></li>
-                            <li><a class="options-color tt-color-bg-18" href="#"></a></li>
-                            <li><a class="options-color" href="#">
-									<span class="swatch-img">
-										<img src="{{ asset('user_side/images/custom/texture-img-01.jpg') }}" alt="">
-									</span>
-                                    <span class="swatch-label color-black"></span>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
+
                 <div class="tt-collapse open">
                     <h3 class="tt-collapse-title">VENDOR</h3>
                     <div class="tt-collapse-content">
@@ -123,74 +82,8 @@
                         <a href="#" class="btn-link-02">+ More</a>
                     </div>
                 </div>
-                <div class="tt-collapse open">
-                    <h3 class="tt-collapse-title">SALE PRODUCTS</h3>
-                    <div class="tt-collapse-content">
-                        <div class="tt-aside">
-                            <a class="tt-item" href="#">
-                                <div class="tt-img">
-                                    <span class="tt-img-default"><img src="{{ asset('user_side/images/product/product-01.jpg') }}" alt=""></span>
-                                    <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/product/product-01-02.jpg') }}" alt=""></span>
-                                </div>
-                                <div class="tt-content">
-                                    <h6 class="tt-title">Flared Shift Dress</h6>
-                                    <div class="tt-price">
-                                        <span class="sale-price">$14</span>
-                                        <span class="old-price">$24</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="tt-item" href="#">
-                                <div class="tt-img">
-                                    <span class="tt-img-default"><img src="{{ asset('user_side/images/product/product-02.jpg') }}" alt=""></span>
-                                    <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/product/product-02-02.jpg') }}" alt=""></span>
-                                </div>
-                                <div class="tt-content">
-                                    <h6 class="tt-title">Flared Shift Dress</h6>
-                                    <div class="tt-price">
-                                        <span class="sale-price">$14</span>
-                                        <span class="old-price">$24</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="tt-item" href="#">
-                                <div class="tt-img">
-                                    <span class="tt-img-default"><img src="{{ asset('user_side/images/product/product-03.jpg') }}" alt=""></span>
-                                    <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/product/product-03-02.jpg') }}" alt=""></span>
-                                </div>
-                                <div class="tt-content">
-                                    <h6 class="tt-title">Flared Shift Dress</h6>
-                                    <div class="tt-price">
-                                        <span class="sale-price">$14</span>
-                                        <span class="old-price">$24</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tt-collapse open">
-                    <h3 class="tt-collapse-title">TAGS</h3>
-                    <div class="tt-collapse-content">
-                        <ul class="tt-list-inline">
-                            <li><a href="#">Dresses</a></li>
-                            <li><a href="#">Shirts &amp; Tops</a></li>
-                            <li><a href="#">Polo Shirts</a></li>
-                            <li><a href="#">Sweaters</a></li>
-                            <li><a href="#">Blazers</a></li>
-                            <li><a href="#">Vests</a></li>
-                            <li><a href="#">Jackets</a></li>
-                            <li><a href="#">Outerwear</a></li>
-                            <li><a href="#">Activewear</a></li>
-                            <li><a href="#">Pants</a></li>
-                            <li><a href="#">Jumpsuits</a></li>
-                            <li><a href="#">Shorts</a></li>
-                            <li><a href="#">Jeans</a></li>
-                            <li><a href="#">Skirts</a></li>
-                            <li><a href="#">Swimwear</a></li>
-                        </ul>
-                    </div>
-                </div>
+
+
                 <div class="tt-content-aside">
                     <a href="listing-left-column.html" class="tt-promo-03">
                         <img src="{{ asset('user_side/images/custom/listing_promo_img_07.jpg') }}" alt="">
@@ -233,15 +126,11 @@
                         <div class="col-6 col-md-4 tt-col-item">
                             <div class="tt-product thumbprod-center">
                                 <div class="tt-image-box">
-                                    <a href="#" class="tt-btn-quickview" data-toggle="modal" data-target="#ModalquickView"	data-tooltip="Quick View" data-tposition="left"></a>
-                                    <a href="#" class="tt-btn-wishlist" data-tooltip="Add to Wishlist" data-tposition="left"></a>
-                                    <a href="#" class="tt-btn-compare" data-tooltip="Add to Compare" data-tposition="left"></a>
-                                    <a href="{{route('product.show',$product->id)}}">
-                                        @foreach($product->productimages as $image)
-                                            <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $image->image_path }}" alt=""></span>
 
-                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $image->image_path }}" alt=""></span>
-                                        @endforeach
+                                    <a href="{{route('product.show',$product->id)}}">
+                                            <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $product->productimages->first()->image_path  }}" alt=""></span>
+
+                                        <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $product->productimages->first()->image_path  }}" alt=""></span>
 
                                     </a>
                                 </div>
@@ -266,11 +155,7 @@
                                         <div class="tt-row-btn">
                                             <a href="#" class="tt-btn-addtocart thumbprod-button-bg" data-toggle="modal" data-target="#modalAddToCartProduct">ADD TO CART</a>
                                         </div>
-                                        <div class="tt-row-btn">
-                                            <a href="#" class="tt-btn-quickview" data-toggle="modal" data-target="#ModalquickView"></a>
-                                            <a href="#" class="tt-btn-wishlist"></a>
-                                            <a href="#" class="tt-btn-compare"></a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
