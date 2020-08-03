@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="30c6cfb4-9146-4bd9-9437-3db7d8c9fd8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/user_side/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/user_side/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user_side/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user_side/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LandingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LandingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_22_124630_create_favorites_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user_side/my_store.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user_side/my_store.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +223,10 @@
       <workItem from="1596033046055" duration="1722000" />
       <workItem from="1596035301270" duration="10080000" />
       <workItem from="1596108831871" duration="5896000" />
+      <workItem from="1596460397156" duration="90000" />
+      <workItem from="1596460509590" duration="8000" />
+      <workItem from="1596460518372" duration="951000" />
+      <workItem from="1596470630306" duration="2651000" />
     </task>
     <servers />
   </component>
@@ -252,10 +258,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="406" y="60" key="#phpunit.xml/0.0.1440.860@0.0.1440.860" timestamp="1594687909517" />
-    <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1595023385694">
+    <state x="500" y="184" key="FileChooserDialogImpl" timestamp="1596460514761">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1595023385694" />
+    <state x="500" y="184" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1596460514761" />
     <state x="529" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595685921940">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

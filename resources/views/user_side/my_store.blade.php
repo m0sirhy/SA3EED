@@ -73,110 +73,32 @@
         </div>
 <div class="container-indent">
     <div class="container-fluid-custom">
-        <h1 class="tt-title-subpages noborder">PORTFOLIO</h1>
+        <h1 class="tt-title-subpages noborder">Store Name</h1>
         <div class="tt-portfolio-masonry">
             <div class="tt-filter-nav">
                 <div class="button active" data-filter="*">ALL</div>
+                @foreach($products as $product)
+
                 <div class="button" data-filter=".sort-value-01">WOMEN</div>
                 <div class="button" data-filter=".sort-value-02">MEN </div>
+                @endforeach
             </div>
             <div class="tt-portfolio-content layout-default tt-grid-col-3  tt-add-item">
-                <div class="element-item sort-value-01">
+                @foreach($products as $product)
+                <div class="element-item {{$product->category->name}}">
                     <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-01.jpg') }}" alt="">
+                        <img src="{{ $product->productimages->first()->image_path}}" alt="">
                         <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
+                            <h6 class="tt-title"><a href="#">{{$product->title}}</a></h6>
                             <p>
-                                Lorem ipsum dolor sit amet cons.
+                                {!!  $product->description !!}
                             </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-01.jpg') }}" class="tt-btn-zomm"></a>
+                            <a href="{{ $product->productimages->first()->image_path}}" class="tt-btn-zomm"></a>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="element-item sort-value-02">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-02.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-02.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="element-item sort-value-02">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-03.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-03.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="element-item sort-value-01">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-04.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-04.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="element-item sort-value-02">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-05.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-05.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="element-item sort-value-02">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-07.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-07.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="element-item sort-value-01">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-08.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-08.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="element-item sort-value-01">
-                    <figure>
-                        <img src="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-06.jpg') }}" alt="">
-                        <figcaption>
-                            <h6 class="tt-title"><a href="#">TITLE</a></h6>
-                            <p>
-                                Lorem ipsum dolor sit amet cons.
-                            </p>
-                            <a href="{{ asset('user_side/images/portfolio/portfolio-col-grid-four-img-06.jpg') }}" class="tt-btn-zomm"></a>
-                        </figcaption>
-                    </figure>
-                </div>
+                @endforeach
+
             </div>
             <div class="text-center isotop_showmore_js">
                 <a href="#" class="btn btn-border">LOAD MORE</a>
