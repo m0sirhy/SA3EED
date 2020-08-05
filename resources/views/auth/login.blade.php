@@ -43,13 +43,13 @@
                                             <div class="form-group">
                                                 <label for="loginInputName">{{ __('E-Mail Address') }} <sup>*</sup></label>
                                                 <div class="tt-required">* Required Fields</div>
-                                                <input type="email" name="customer[email]" class="form-control" id="loginInputName" placeholder="Enter E-mail">
+                                                <input type="email" name="email" class="form-control" id="loginInputName" placeholder="Enter E-mail">
                                             </div>
 
 
                                             <div class="form-group">
                                                 <label for="loginInputEmail">{{ __('Password') }} <sup>*</sup></label>
-                                                <input type="password" value="" name="customer[password]" class="form-control" id="loginInputEmail" placeholder="Enter Password">
+                                                <input type="password" value="" name="password" class="form-control" id="loginInputEmail" placeholder="Enter Password">
                                             </div>
 
 
