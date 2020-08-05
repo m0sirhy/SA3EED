@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
+
     protected $guarded = ['id'];
 
 
@@ -26,7 +27,7 @@ class Product extends Model
     public function tags(){
         return $this->hasMany('App\Tag');
     }
-  
+
     public function favorite()
     {
         return $this->belongsTo('App\Favorite');

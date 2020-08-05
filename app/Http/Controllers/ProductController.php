@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\product;
+use App\Product;
 
 
 use Illuminate\Http\Request;
@@ -13,10 +13,16 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $latestproduct =product::latest()->get();
-        return  view('user_side.index', compact('latestproduct'));
+//        $products =product::when($request->category_id, function ($q) use ($request) {
+//
+//        return $q->where('category_id', $request->category_id);
+//
+//    })->latest();
+
+        return view('user_side.product');
+
     }
 
 
@@ -54,9 +60,14 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
         //
+        $related= Product::where('category_id', '=', $product->category->id)
+            ->where('id', '!=', $product->id)
+            ->get();
+        return view('user_side.product',compact('product','related'));
+
     }
 
     /**

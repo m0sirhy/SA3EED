@@ -11,34 +11,47 @@
 |
 */
 
-Route::get('/', function () {
-    return view('user_side.index');
+
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+    Auth::routes();
+
+    Route::get('/', 'LandingController@index');
+
+
+    Route::get('/discraption/{id}', 'ProductController@discraption');
+
+
+
+
+
+    Route::get('/my_pr', function () {
+        return view('user_side.my_products');
+    });
+    Route::get('/my_store', function () {
+        return view('user_side.my_store');
+    });
+
+
+
+
+    Route::get('/home', 'HomeController@index')->name('home');
+ Route::resource('user','UserController');
+
+    Route::resource('product', 'ProductController');
+    Route::resource('category', 'CategoryController')->only([
+        'index', 'show'
+    ]);
+    Route::resource('tag', 'TagController');
+    Route::resource('favorite', 'favoriteController');
+
 });
-Route::get('/', 'ProductController@index');
+Route::group(['middleware' => ['auth']], function () {
 
-Route::get('/discraption/{id}', 'ProductController@discraption');
+    Route::get('/my_store','LandingController@my_store');
 
 
-//This tow routes for testing purpose
-Route::get('/temp_login', function () {
-    return view('user_side.account.login');
+    Route::get('/my_pr', function () {
+        return view('user_side.my_products');
+    });
 });
-
-Route::get('/temp_register', function () {
-    return view('user_side.account.register');
-});
-
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-// Route::resource('user','UserController');
-
-Route::resource('product','ProductController');
-Route::resource('category','CategoryController');
-Route::resource('tag','TagController');
-Route::resource('favorite','favoriteController');
-
-
 

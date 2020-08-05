@@ -4,12 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use PhpParser\Builder\Function_;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Category extends Model
 {
+    use Sluggable;
+
     //
     protected $fillable = [
-'name','image'
+'name','image','slug'
 ];
 
     public function products()
@@ -20,8 +23,16 @@ class Category extends Model
     protected $append=['image_path'];
 
     public Function getImagePathAttribute(){
-        return asset('public_uploads/categories_image'.$this->image);
+        return asset('uploads/categories_images/'.$this->image);
 
     }
 
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
 }
