@@ -12,7 +12,7 @@
 */
 
 
-// Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Auth::routes();
 
     Route::get('/', 'LandingController@index');
@@ -44,7 +44,7 @@
     Route::resource('tag', 'TagController');
     Route::resource('favorite', 'favoriteController');
 
-// });
+});
 Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/my_store','LandingController@my_store');
