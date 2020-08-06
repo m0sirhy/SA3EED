@@ -564,7 +564,6 @@
                     </div>
                     <!-- /tt-search -->
                     @auth
-
                     <!-- tt-cart -->
                     <div class="tt-desctop-parent-cart tt-parent-box">
                         <div class="tt-cart tt-dropdown-obj">
@@ -582,13 +581,13 @@
                                         <!-- layout emty cart -->
                                     
                                        
-                                        @if ($my_products->count() > 0)
+                                        @if (App\Product::where('user_id',auth()->user()->id)->get()->count() > 0)
                                       
                                         <div class="tt-cart-content">
                                             <div class="tt-cart-list">
-                                            @foreach($my_products as $product)
+                                            @foreach(App\Product::where('user_id',auth()->user()->id)->get() as $product)
                                                 <div class="tt-item">
-                                                    <a href="product.html">
+                                                    <a href="{{route('product.show',$product->id)}}">
                                                         <div class="tt-item-img">
                                                             <img src="{{ asset('user_side/images/loader.svg')}}" data-src="{{ $product->productimages->first()->image_path }}" alt="">
                                                         </div>
@@ -640,7 +639,7 @@
                                      
                                         @else
                                         <li><a href=""><i class="icon-f-94"></i>Account</a></li>
-                                        <li><a href="wishlist.html"><i class="icon-n-072"></i>My Products</a></li>
+                                        <li><a href="{{route('my')}}"><i class="icon-n-072"></i>My Products</a></li>
                                       
                 
                                         <li>

@@ -51,6 +51,7 @@ $product=Product::get();
     public function show(Product $product)
     {
         //
+        
         $related= Product::where('category_id', '=', $product->category->id)
             ->where('id', '!=', $product->id)
             ->get();

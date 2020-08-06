@@ -27,4 +27,11 @@ class LandingController extends Controller
         return view('user_side.my_store',compact('products'));
 
     }
+    public function my_products(){
+        $my_products=Product::where('user_id',Auth::id())->get();
+
+        return view('user_side.my_products',compact('my_products'));
+
+        
+    }
 }

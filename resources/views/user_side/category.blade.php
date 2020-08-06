@@ -142,7 +142,7 @@
                                     </div>
                                     <div class="tt-product-inside-hover">
                                         <div class="tt-row-btn">
-                                            <a href="#" class="tt-btn-addtocart thumbprod-button-bg" data-toggle="modal" data-target="#modalAddToCartProduct">Contact the advertiser</a>
+                                            <a href="{{route('product.show',$product->id)}}" class="btn btn-sm" ><i class="icon-e-46"></i>More Details</a>
                                         </div>
 
                                     </div>

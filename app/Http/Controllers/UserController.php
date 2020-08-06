@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+use App\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     /**
@@ -11,9 +13,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+                 $id= Auth::id();
+                  $user=User::find($id);
+                  $my_products=Product::where('user_id',$id)->get();
+                  return view('user_side.account',compact('user','my_products'));
     }
 
     /**

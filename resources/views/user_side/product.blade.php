@@ -59,8 +59,11 @@
                                     </div>
                                 </div>
                                 <div class="col-item">
+                                @guest
                                     <a href="#" class="btn btn-lg"  data-toggle="modal" data-target="#ModalLogin"><i class="icon-f-93"></i>Contact the advertiser</a>
-                                
+                               @else
+                                    <a href="#" class="btn btn-lg"  data-toggle="modal" data-target="#ModalView"><i class="icon-f-93"></i>Contact the advertiser</a>
+@endguest
                                 </div>
                             </div>
                         </div>
@@ -160,5 +163,32 @@
             </div>
         </div>
     </div>
+<!-- modal (quickViewModal) -->
+<div class="modal  fade"  id="ModalView" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
+            </div>
+            <div class="modal-body">
+                <div class="tt-modal-quickview ">
+                    <div class="row">
+                      
+                        <div class="col-12 ">
+                            <div class="tt-product-single-info">
+
+                                <h2 class="tt-title">User Name : {{$product->user->user_name}}</h2>
+                                <h2 class="tt-title">Mobile Numper : {{$product->user->user_info->phone}}</h2>
+                                <h2 class="tt-title">Address : {{$product->user->user_info->address_1}}</h2>
+                                <h2 class="tt-title">City: {{$product->user->user_info->city}}</h2>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection
