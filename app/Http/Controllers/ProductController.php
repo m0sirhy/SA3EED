@@ -15,24 +15,12 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-//        $products =product::when($request->category_id, function ($q) use ($request) {
-//
-//        return $q->where('category_id', $request->category_id);
-//
-//    })->latest();
+$product=Product::get();
 
-        return view('user_side.product');
 
     }
 
 
-
-    public function discraption($id)
-    {
-      $products =product::find($id);
-  return  view('user_side.products_discrabtion', compact('products'));
-
-    }
     /**
      * Show the form for creating a new resource.
      *

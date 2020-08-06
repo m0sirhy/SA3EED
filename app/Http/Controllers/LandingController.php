@@ -13,10 +13,12 @@ class LandingController extends Controller
     //
     public function index()
     {
+        $id = Auth::id();
 
-        $categories = Category::withCount('products')->latest('products_count')->take(2)->get();
-
-        return view('user_side.index', compact('categories'));
+        $categories = Category::withCount('products')->latest('products_count')->take(6)->get();
+        $my_products= Product::where('user_id',$id)->get();
+      
+        return view('user_side.index', compact('categories','my_products'));
     }
 
     public function my_store()

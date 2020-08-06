@@ -39,6 +39,50 @@
 <footer>
     @include('includes.user_side.footer')
 </footer>
+
+<!-- Modal (Login) -->
+<div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true"  data-pause=3500>
+	<div class="modal-dialog modal-discount">
+		<div class="modal-content ">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
+			</div>
+			<form class="form-default"  method="post" action="{{ route('login') }}">
+                @csrf
+				<div class="modal-body tt-background">
+					<div class="tt-modal-discount row">
+						<div class="col-6 ml-auto">
+							<div class="tt-promo-title">
+							
+								<div class="text-03">Login Now</div>
+							</div>
+							<div class="form-group">
+								<input type="text" name="email" class="form-control" placeholder="Enter Email">
+                                @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                        @enderror
+                            </div>
+                            <div class="form-group">
+								<input type="passsword" name="password" class="form-control" placeholder="Enter Password">
+                                @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                        @enderror
+                            </div>
+                            <button type="submit">Login</a>
+							<p>
+								<a href="{{ __('register') }}" class="tt-link-underline js-reject-discount">NEW CUSTOMER,CREATE AN ACCOUNT</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 <!-- modal (quickViewModal) -->
 <div class="modal  fade"  id="ModalquickView" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

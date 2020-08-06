@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function user_info()
     {
-        return $this->hasOne('App\User_Info');
+        return $this->hasOne('App\UserInfo');
     }
     public function user_type()
     {

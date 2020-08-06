@@ -135,25 +135,14 @@
                                     </a>
                                 </div>
                                 <div class="tt-description">
-                                    <div class="tt-row">
-                                        <ul class="tt-add-info">
-                                            <li><p>product rate</p></li>
-                                        </ul>
-                                        <div class="tt-rating">
-                                            <i class="icon-star"></i>
-                                            <i class="icon-star"></i>
-                                            <i class="icon-star"></i>
-                                            <i class="icon-star"></i>
-                                            <i class="icon-star"></i>
-                                        </div>
-                                    </div>
+                                  
                                     <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
                                     <div class="tt-price">
                                         {{$product->price}}
                                     </div>
                                     <div class="tt-product-inside-hover">
                                         <div class="tt-row-btn">
-                                            <a href="#" class="tt-btn-addtocart thumbprod-button-bg" data-toggle="modal" data-target="#modalAddToCartProduct">ADD TO CART</a>
+                                            <a href="#" class="tt-btn-addtocart thumbprod-button-bg" data-toggle="modal" data-target="#modalAddToCartProduct">Contact the advertiser</a>
                                         </div>
 
                                     </div>
