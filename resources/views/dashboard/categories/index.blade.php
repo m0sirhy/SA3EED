@@ -23,7 +23,6 @@
                     <h3 class="box-title" style="margin-bottom: 15px">@lang('site.categories') <small></small></h3>
 
                     <form action="{{ route('dashboard.categories.index') }}" method="get">
-                        
                         <div class="row">
 
                             <div class="col-md-4">
@@ -59,13 +58,12 @@
                                 <th>@lang('site.action')</th>
                             </tr>
                             </thead>
-                            
                             <tbody>
                             @foreach ($categories as $index=>$category)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $category->name }}</td>
-                                    <td> $category->products->count() </td>
+                                    <td>{{$category->products->count()}}  </td>
                                     <td><a href="{{route('dashboard.products.index', ['category_id' => $category->id])}}" class="btn btn-info btn-sm">@lang('site.related_products')</a></td>
                                     <td>
                                         @can('category-edit')
@@ -84,17 +82,16 @@
                                         @endcan
                                     </td>
                                 </tr>
-                            
                             @endforeach
                             </tbody>
 
                         </table><!-- end of table -->
-                        
-                        
+
+
                     @else
-                        
+
                         <h2>@lang('site.no_data_found')</h2>
-                        
+
                     @endif
 
                 </div><!-- end of box body -->

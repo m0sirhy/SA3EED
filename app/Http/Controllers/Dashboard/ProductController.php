@@ -31,10 +31,14 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $products = Product::get();
+        $products = Product::get()->when($request->category_id, function ($q) use ($request) {
+
+            return $q->where('category_id', $request->category_id);
+
+        });
         return view('Dashboard.products.index', compact('products'));
     }
 
@@ -58,15 +62,16 @@ class ProductController extends Controller
      */
     public function store(Request $request, User $user, Product $product)
     {
-        //
-//        $request->validate([
-//                'title' => 'required',
-//                'description' => 'required',
-//                'category_id' => 'required'
-//
-//            ]
-//
-//        );
+
+        $request->validate([
+                'title' => 'required',
+                'description' => 'required',
+                'category_id' => 'required',
+                'image'=> 'required|max:3'
+
+            ]
+
+        );
 
 
         $request_data = $request->except('image');
@@ -174,6 +179,7 @@ class ProductController extends Controller
         }
 
         $product->productimages()->delete();
+        $product->delete();
         session()->flash('success', ('site.delete_successfully'));
         return redirect()->route('dashboard.products.index');
 

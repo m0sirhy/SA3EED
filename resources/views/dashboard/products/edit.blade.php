@@ -29,6 +29,19 @@
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 
+
+                        <div class="form-group">
+                            <label>@lang('site.name')</label>
+                            <input type="text" name="title" class="form-control " value="{{$product->title}}">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>@lang('site.description')</label>
+                            <textarea name="description" class="form-control ckeditor">{!! $product->description  !!}</textarea>
+                        </div>
+
+
                         <div class="form-group">
                             <label>@lang('site.categories')</label>
                             <select name="category_id" class="form-control">
@@ -41,22 +54,23 @@
 
 
 
-                            <div class="form-group">
-                                <label>@lang('site.description')</label>
-                                <textarea name="description" class="form-control ckeditor">{!! $product->description  !!}</textarea>
-                            </div>
-
-
-
                         <div class="form-group">
                             <label>@lang('site.image')</label>
-                            <input multiple type="file" name="image[]" class="form-control image">
+                            <input  type="file" name="image[]" class="form-control image" multiple>
                         </div>
 
                         <div class="form-group">
                             <img src="{{ $product->image_path }}"   style="width: 100px" class="img-thumbnail image-preview" alt="">
                         </div>
 
+                        <div class="form-group">
+                            <label>Old Image</label>
+                            @foreach($product->productimages as $image)
+
+                            <img src="{{$image->image_path }}" style="width: 100px"
+                                 class="img-thumbnail " alt="">
+                            @endforeach
+                        </div>
 
                         <div class="form-group">
                             <label>@lang('site.sale_price')</label>

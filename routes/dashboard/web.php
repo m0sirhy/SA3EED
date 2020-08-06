@@ -4,7 +4,7 @@
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 
-    // Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['auth']], function () {
 
         Route::prefix('dashboard')->name('dashboard.')->group(function () {
             Route::get('welcome', function () {
@@ -20,5 +20,5 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
             Route::resource('roles', 'RoleController');
             Route::resource('products','ProductController');
         });
-    // });
+    });
 });

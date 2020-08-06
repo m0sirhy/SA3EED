@@ -75,7 +75,7 @@
                                 <tr>
                                     <td>{{$user->id}}</td>
                                     <td> {{$user->user_name}}</td>
-                                    <td> $user->last_name</td>
+                                    <td> {{$user->user_info->first_name}}</td>
                                     <td>{{$user->email}} </td>
                                     <td><img src="{{$user->image_path}} " style="width: 100px;" class="img-thumbnail"
                                              alt=""></td>

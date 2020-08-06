@@ -1,3 +1,4 @@
+  
 <meta charset="utf-8">
 <title>mKh Store</title>
 <meta name="keywords" content="HTML5 Template">
@@ -10,4 +11,3 @@
 
 <link rel="stylesheet" href="{{ asset('user_side/css/rtl.css') }}">
     @endif
-

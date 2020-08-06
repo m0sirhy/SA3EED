@@ -77,11 +77,10 @@
         <div class="tt-portfolio-masonry">
             <div class="tt-filter-nav">
                 <div class="button active" data-filter="*">ALL</div>
-                @foreach($products as $product)
 
                 <div class="button" data-filter=".sort-value-01">WOMEN</div>
                 <div class="button" data-filter=".sort-value-02">MEN </div>
-                @endforeach
+
             </div>
             <div class="tt-portfolio-content layout-default tt-grid-col-3  tt-add-item">
                 @foreach($products as $product)

@@ -1,5 +1,4 @@
-
-    <div class="tt-footer-default tt-color-scheme-02">
+<div class="tt-footer-default tt-color-scheme-02">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-9">

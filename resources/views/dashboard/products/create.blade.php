@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label>@lang('site.name')</label>
-                            <input type="text" name="title" class="form-control ">{{ old('title') }}</input>
+                            <input type="text" name="title" class="form-control " value="{{ old('title') }}">
                         </div>
 
                         <div class="form-group">
@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label>@lang('site.image')</label>
-                            <input type="file" name="image[]" class="form-control image">
+                            <input type="file" name="image[]" class="form-control image" multiple>
                         </div>
 
                         <div class="form-group">

@@ -21,7 +21,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Route::get('/discraption/{id}', 'ProductController@discraption');
 
 
-
+    Route::get('/add_product', function () {
+        return view('user_side.add_product');
+    });
 
 
     Route::get('/my_pr', function () {

@@ -39,12 +39,12 @@
                         </div>
                         <div class="form-group">
                             <label>@lang('site.first_name')</label>
-                            <input type="text" name="first_name" class="form-control" value="{{ $user->first_name }}">
+                            <input type="text" name="first_name" class="form-control" value="{{ $user->user_info->first_name }}">
                         </div>
 
                         <div class="form-group">
-                            <label>@lang('site.last_name')</label>
-                            <input type="text" name="last_name" class="form-control" value="{{ $user->last_name }}">
+                            <label>@lang('site.last_name')</label>git
+                            <input type="text" name="last_name" class="form-control" value="{{ $user->user_info->last_name }}">
                         </div>
 
                         <div class="form-group">
