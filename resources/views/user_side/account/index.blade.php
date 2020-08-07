@@ -9,6 +9,7 @@
 			<h1 class="tt-title-subpages noborder">ACCOUNT</h1>
 			<div class="tt-shopping-layout">
 				<h2 class="tt-title-border">MY ACCOUNT</h2>
+				
 				<div class="tt-wrapper">
 					<h3 class="tt-title">Your Advertisement</h3>
 					<div class="tt-table-responsive">
@@ -41,9 +42,9 @@
 					</div>
 				</div>
 				<div class="tt-wrapper">
-                    <h3 class="tt-title">ACCOUNT DETAILS</h3>
+					<h3 class="tt-title">ACCOUNT DETAILS,</h3> 
                     @if($user->user_info != null)
-                
+					<h4> <a href="{{route('user.edit',$user->id)}}"> Edit<i class="icon-01"></i></a></h4>
 					<div class="tt-table-responsive">
 						<table class="tt-table-shop-02">
 							<tbody>
@@ -51,9 +52,17 @@
 									<td>USER-NAME:</td>
 									<td>{{$user->user_name}}</td>
 								</tr>
+								
 								<tr>
 									<td>E-MAIL:</td>
 									<td>{{$user->email}}</td>
+								</tr>
+								<tr>
+									<td>FIRST NAME :</td>
+									<td>{{$user->user_info->first_name}}</td>
+								</tr>	<tr>
+									<td>LAST NAME :</td>
+									<td>{{$user->user_info->last_name}}</td>
 								</tr>
 								<tr>
 									<td>ADDRESS 1:</td>
@@ -82,7 +91,7 @@
                     <div class="tt-wrapper">
 
                     <h3 class="tt-title">Please Fill Your Account Data  </h3>
-                    <button class="btn bt-sm">Fill Your Data </button>
+                    <a href="{{route('user.create')}}" class="btn bt-sm">Fill Your Data </a>
                     </div>
                     @endif
 				</div>

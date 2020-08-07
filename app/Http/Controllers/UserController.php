@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\User;
+use App\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
@@ -19,7 +20,7 @@ class UserController extends Controller
                  $id= Auth::id();
                   $user=User::find($id);
                   $my_products=Product::where('user_id',$id)->get();
-                  return view('user_side.account',compact('user','my_products'));
+                  return view('user_side.account.index',compact('user','my_products'));
     }
 
     /**
@@ -30,6 +31,8 @@ class UserController extends Controller
     public function create()
     {
         //
+        $user=User::find(Auth::id());
+        return view('user_side.account.create',compact('user'));
     }
 
     /**
@@ -41,6 +44,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $id= Auth::id();
+        $request->request->add(['user_id' => $id]); //add request
+         UserInfo::create($request->all());
+         return redirect()->route('user.index');
+
     }
 
     /**
@@ -62,7 +70,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        // 
+               $user=User::find($id);
+
+        return view('user_side.account.edit',compact('user'));
     }
 
     /**
@@ -72,9 +83,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
         //
+        $user->update($request->all());
+        return redirect()->route('user.index');
+
     }
 
     /**

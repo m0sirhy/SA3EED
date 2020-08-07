@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Category;
 use App\Product;
 
 
@@ -15,9 +17,11 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-$product=Product::get();
 
 
+        $products = Product::orderBy('created_at', 'desc')->limit(30)->get();
+        $categories = Category::get();
+        return view('user_side.products', compact('products','categories'));
     }
 
 
@@ -51,12 +55,11 @@ $product=Product::get();
     public function show(Product $product)
     {
         //
-        
-        $related= Product::where('category_id', '=', $product->category->id)
+
+        $related = Product::where('category_id', '=', $product->category->id)
             ->where('id', '!=', $product->id)
             ->get();
-        return view('user_side.product',compact('product','related'));
-
+        return view('user_side.product', compact('product', 'related'));
     }
 
     /**

@@ -22,8 +22,8 @@ class CreateUserInfosTable extends Migration
             $table->string('address_1');
             $table->string('address_2');
             $table->string('city');
-            $table->string('state');
-            $table->string('country');
+            $table->string('state')->nullable();
+            $table->string('country')->nullable();
             $table->timestamps();
         });
     }

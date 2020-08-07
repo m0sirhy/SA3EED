@@ -78,13 +78,13 @@
             <div class="tt-filter-nav">
                 <div class="button active" data-filter="*">ALL</div>
 
-                <div class="button" data-filter=".sort-value-01">WOMEN</div>
-                <div class="button" data-filter=".sort-value-02">MEN </div>
+                <div class="button" data-filter=".1">WOMEN</div>
+                <div class="button" data-filter=".2">MEN </div>
 
             </div>
             <div class="tt-portfolio-content layout-default tt-grid-col-3  tt-add-item">
                 @foreach($products as $product)
-                <div class="element-item {{$product->category->name}}">
+                <div class="element-item {{$product->category->id}}">
                     <figure>
                         <img src="{{ $product->productimages->first()->image_path}}" alt="">
                         <figcaption>
