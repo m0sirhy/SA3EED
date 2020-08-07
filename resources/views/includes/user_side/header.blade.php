@@ -202,7 +202,7 @@
                     <div class="tt-cart tt-dropdown-obj">
                         <button class="tt-dropdown-toggle">
                             <i class="icon-f-39"></i>
-                            <span class="tt-badge-cart">3</span>
+                            <span class="tt-badge-cart">{{auth()->user()->product->count()}}</span>
                         </button>
                         <div class="tt-dropdown-menu">
                             <div class="tt-mobile-add">
@@ -214,11 +214,11 @@
                                     <!-- layout emty cart -->
 
 
-                                    @if (App\Product::where('user_id',auth()->user()->id)->get()->count() > 0)
+                                    @if (auth()->user()->product != null)
 
                                     <div class="tt-cart-content">
                                         <div class="tt-cart-list">
-                                            @foreach(App\Product::where('user_id',auth()->user()->id)->get() as $product)
+                                            @foreach(auth()->user()->product as $product)
                                             <div class="tt-item">
                                                 <a href="{{route('product.show',$product->id)}}">
                                                     <div class="tt-item-img">
