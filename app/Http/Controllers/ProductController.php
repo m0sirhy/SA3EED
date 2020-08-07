@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
-
-
+use App\User;
+use Image;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -41,9 +43,42 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, User $user, Product $product)
     {
         //
+        
+
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'image'=> 'required|max:3'
+
+        ]
+
+    );
+
+
+    $request_data = $request->except('image');
+    $request_data += ['user_id' => Auth::user()->id];
+    //
+
+    $product = Product::create($request_data);
+
+    if ($request->image) {
+        $images = $request->file('image');
+        foreach ($images as $image) {
+            $imagename = time() . '.' . $image->hashName();
+            $img = Image::make($image);
+            $img->save(public_path('uploads/product_images/' . $imagename));
+            $request_data['image'] = $imagename;
+            $request_data += ['product_id' => $product->id];
+            $product->productimages()->create($request_data);
+        }
+
+    }
+    session()->flash('success', __('site.added_successfully'));
+    return redirect()->route('product.index');
     }
 
     /**
@@ -91,8 +126,20 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
         //
+        
+        foreach ($product->productimages()->get('image') as $image) {
+            if ($image != "default.png") {
+                Storage::disk('public_uploads')->delete('/product_images/' . $image);
+
+            }
+        }
+
+        $product->productimages()->delete();
+        $product->delete();
+        session()->flash('success', ('site.delete_successfully'));
+        return redirect()->route('land');
     }
 }

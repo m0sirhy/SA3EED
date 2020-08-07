@@ -16,7 +16,7 @@ use App\Http\Controllers\LandingController;
 Route::group(['prefix' => LaravelLocalization::setLocale()], function() {
     Auth::routes();
 
-    Route::get('/', 'LandingController@index');
+    Route::get('/', 'LandingController@index')->name('land');
 
 
     Route::get('/discraption/{id}', 'ProductController@discraption');

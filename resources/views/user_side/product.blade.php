@@ -47,7 +47,7 @@
                         </div>
                   
                         <div class="tt-wrapper">
-                            {{$product->description}}                        </div>
+                            {!!$product->description!!}                        </div>
 
                         <div class="tt-wrapper">
                             <div class="tt-row-custom-01">

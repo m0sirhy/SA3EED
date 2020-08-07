@@ -4,45 +4,36 @@
     @include('includes.user_side.breedCrumb')
 
 </div>
-<div class="container-indent">
-    <div class="container container-fluid-custom-mobile-padding">
-        <h1 class="tt-title-subpages noborder">My Products</h1>
-        <div class="row">
-            <div class="col-12">
-                <div class="tt-listing-post tt-half">
-                    @foreach($my_products as $product)
-                    <div class="tt-post">
-                        <div class="tt-post-img">
-                            <a href="{{route('product.show',$product->id)}}"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{$product->productimages->first()->image_path}}" alt=""></a>
-                        </div>
-                        <div class="tt-post-content">
-                            <div class="tt-tag"><a href="{{route('category.show',$product->category->slug)}}">{{$product->category->name}}</a></div>
-                            <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
-                            <div class="tt-description">
-                                {{$product->description}} </div>
-                            <div class="tt-meta">
-                                <div class="tt-autor">
-                                    {{$product->created_at->diffForHumans()}}
-                                </div>
 
-                            </div>
-                            <div class="tt-btn">
-                                <a href="#" class="btn bt-sm">Edit</a>
+
+<div class="container-indent">
+    <div class="container">
+        <h1 class="tt-title-subpages noborder">MY PRODUCTS</h1>
+        <div class="tt-wishlist-box" id="js-wishlist-removeitem">
+            <div class="tt-wishlist-list">
+                @foreach($my_products as $product)
+                <div class="tt-item">
+                    <div class="tt-col-description">
+                        <div class="tt-img">
+                            <img src="{{$product->productimages->first()->image_path}}" alt="">
+                        </div>
+                        <div class="tt-description">
+                            <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
+                            <div class="tt-price">
+                                <span class="new-price">{{$product->price}} </span>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-
-                    <div class="tt-pagination">
-                        <!-- <a href="#" class="btn-pagination btn-prev"></a> -->
-                        <ul>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                        </ul>
-                        <a href="#" class="btn-pagination btn-next"></a>
+                    <div class="tt-col-btn">
+                        <a class="btn-link" href="{{route('product.show',$product->id)}}" ><i class="icon-f-73"></i>SEE PRODUCT</a>
+                        <form action="{{ route('product.destroy', $product->id) }}" method="post" style="display: inline-block">
+                            @csrf
+                            {{ method_field('delete') }}
+                            <button type="submit" class="btn btn-sm"><i class="icon-h-02"></i>REMOVE</button>
+                        </form>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>

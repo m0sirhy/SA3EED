@@ -2,6 +2,7 @@
 
     <script>
         new Noty({
+            theme: 'metroui',
             type: 'success',
             layout: 'topRight',
             text: "{{ session('success') }}",

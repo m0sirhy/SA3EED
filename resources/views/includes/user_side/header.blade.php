@@ -1,4 +1,4 @@
-
+@auth
 @if ( auth()->user()->user_info == null)
 <div class="tt-color-scheme-01">
     <div class="container">
@@ -23,7 +23,8 @@
         </div>
     </div>
 </div>
-@endif
+@endif   
+@endauth
 <!-- tt-mobile-header -->
 <div class="tt-mobile-header">
     <div class="container-fluid">
@@ -217,8 +218,8 @@
                                     @if (auth()->user()->product != null)
 
                                     <div class="tt-cart-content">
-                                        <div class="tt-cart-list">
-                                            @foreach(auth()->user()->product as $product)
+                                        <div class="tt-cart-list"  >
+                                            @foreach(auth()->user()->product->take(3) as $product)
                                             <div class="tt-item">
                                                 <a href="{{route('product.show',$product->id)}}">
                                                     <div class="tt-item-img">
@@ -241,11 +242,12 @@
 
                                         <div class="tt-cart-btn">
                                             <div class="tt-item">
-                                                <a href="#" class="btn">ADD PRODUCT </a>
+                                                <button class="btn" data-toggle="modal" data-target="#ModalAddProduct">ADD PRODUCT NOW!</button>
+
                                             </div>
                                             <div class="tt-item">
-                                                <a href="#" class="btn-link-02 tt-hidden-mobile">My Product</a>
-                                                <a href="#" class="btn btn-border tt-hidden-desctope">My Product</a>
+                                                <a href="{{route('my')}}" class="btn-link-02 tt-hidden-mobile">See More ,My Product</a>
+                                                <a href="{{route('my')}}" class="btn btn-border tt-hidden-desctope">See More ,My Product</a>
                                             </div>
                                         </div>
                                     </div>
