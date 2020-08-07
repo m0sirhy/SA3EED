@@ -1,5 +1,5 @@
 
-@if (App\UserInfo::where('user_id',auth()->user()->id)->get()->count() == 0)
+@if ( auth()->user()->user_info == null)
 <div class="tt-color-scheme-01">
     <div class="container">
         <div class="tt-header-row tt-top-row">
