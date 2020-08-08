@@ -110,7 +110,7 @@
                             <div class="container">
                                 <form>
                                     <div class="tt-col">
-                                        <input type="text" class="tt-search-input" placeholder="Search Products...">
+                                        <input type="text" class="tt-search-input" placeholder="Search Products..." wire:model="searchTerm">
                                         <button class="tt-btn-search" type="submit"></button>
                                     </div>
                                     <div class="tt-col">
@@ -274,7 +274,7 @@
                                     <li><a href="{{ route('register') }}"><i class="icon-f-94"></i>{{ __('Register') }}</a></li>
 
                                     @else
-                                    <li><a href=""><i class="icon-f-94"></i>Account</a></li>
+                                    <li><a href="{{route('user.index')}}"><i class="icon-f-94"></i>Account</a></li>
                                     <li><a href="{{route('my')}}"><i class="icon-n-072"></i>My Products</a></li>
 
 

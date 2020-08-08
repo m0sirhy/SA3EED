@@ -11,14 +11,14 @@
                             <li data-thumb="{{ asset('user_side/images/slides/01/slide-01.jpg') }}" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
                                 <img src="{{ asset('user_side/images/slides/01/slide-01.jpg') }}" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                                 <div class="tp-caption tp-caption1 lft stb" data-x="center" data-y="center" data-hoffset="0" data-voffset="0" data-speed="600" data-start="900" data-easing="Power4.easeOut" data-endeasing="Power4.easeIn">
-                                    <div class="tp-caption1-wd-1 tt-base-color">HELLES</div>
+                                    <div class="tp-caption1-wd-1 tt-base-color">MKH</div>
                                     <div class="tp-caption1-wd-2">Buy and <br>sell</div>
                                     <div class="tp-caption1-wd-3">selling second hand products</div>
                                     <div class="tp-caption1-wd-4">
                                         @auth
                                         <button class="btn btn-xl" data-toggle="modal" data-target="#ModalAddProduct">ADD PRODUCT NOW!</button>
                                         @else
-                                        <a href="{{ route('login') }}" class="btn btn-xl" data-text="SHOP NOW!">Add new productos +</a></div>
+                                        <a href="{{ route('login') }}" class="btn btn-xl" data-text="SHOP NOW!">Add New PRODUCT</a></div>
                                     @endauth
 
                                 </div>
@@ -26,7 +26,7 @@
                             <li data-thumb="{{ asset('user_side/images/slides/01/slide-02.jpg') }}" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
                                 <img src="{{ asset('user_side/images/slides/01/slide-02.jpg') }}" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                                 <div class="tp-caption tp-caption1 lft stb" data-x="center" data-y="center" data-hoffset="0" data-voffset="0" data-speed="600" data-start="900" data-easing="Power4.easeOut" data-endeasing="Power4.easeIn">
-                                    <div class="tp-caption1-wd-1 tt-white-color">HELLES</div>
+                                    <div class="tp-caption1-wd-1 tt-white-color">MKH</div>
                                     <div class="tp-caption1-wd-2 tt-white-color">selling second hand <br>products</div>
                                     <div class="tp-caption1-wd-3 tt-white-color">selling second hand products</div>
 
@@ -35,7 +35,7 @@
                                         @auth
                                         <button class="btn btn-xl" data-toggle="modal" data-target="#ModalAddProduct">ADD PRODUCT NOW!</button>
                                         @else
-                                        <a href="{{ route('login') }}" class="btn btn-xl" data-text="SHOP NOW!">Add new productos +</a></div>
+                                        <a href="{{ route('login') }}" class="btn btn-xl" data-text="SHOP NOW!">Add New PRODUCT</a></div>
                                     @endauth
                                 </div>
                     </div>

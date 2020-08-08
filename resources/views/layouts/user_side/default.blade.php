@@ -13,6 +13,8 @@
 
     {{-- <script defer src="{{ asset('js/app.js') }}"></script>--}}
     {{-- <link href="{{asset('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">--}}
+    
+
 </head>
 
 <body>
@@ -53,6 +55,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
                 </div>
                 <div class="modal-body ">
+                @auth
                     @if ( auth()->user()->user_info != null)
                     <form class="form-default" action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
@@ -94,6 +97,7 @@
                         <a href="{{route('user.create')}}" class="btn">COMPLETE THE PROFILE</a>
                     </div>
                     @endif
+                    @endauth
                 </div>
             </div>
         </div>
@@ -140,6 +144,7 @@
             </div>
         </div>
     </div>
+
 
     <script src="{{ asset('user_side/external/jquery/jquery.min.js') }}"></script>
 
