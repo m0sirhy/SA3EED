@@ -56,7 +56,7 @@
                 </div>
                 <div class="modal-body ">
                 @auth
-                    @if ( auth()->user()->user_info != null)
+                
                     <form class="form-default" action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
@@ -73,30 +73,24 @@
                         </div>
                         <div class="form-group">
                             <label>TITLE</label>
-                            <input type="text" class="form-control" name="title" value="{{old('')}}">
+                            <input type="text" class="form-control" name="title" value="{{old('title')}}">
                         </div>
                         <div class="form-group">
                             <label>DESCRIPTION</label>
                             <textarea name="description" class="form-control ckeditor">{{ old('description') }}</textarea> </div>
                         <div class="form-group">
                             <label>PRICE</label>
-                            <input type="number" class="form-control" name="price" value="{{old('')}}">
+                            <input type="number" class="form-control" name="price" value="{{old('price')}}">
                         </div>
                         <div class="form-group">
-                            <label>QUANTITY</label>
-                            <input type="number" class="form-control" name="quantity" value="{{old('')}}">
+                            <label>PHONE</label>
+                            <input type="number" class="form-control" name="phone" value="{{old('phone')}}">
                         </div>
 
                         <div class="form-group">
                             <input type="submit" class="btn bt-lg"> </div>
                     </form>
-                    @else
-                    <div class="tt-page404">
-                        <h1 class="tt-title">SORRY YOU CAN’T ADD PRODUCT, PLEASE COMPLETE YOUR PROFILE.</h1>
-                        <p>We do that to create safe enviroment</p>
-                        <a href="{{route('user.create')}}" class="btn">COMPLETE THE PROFILE</a>
-                    </div>
-                    @endif
+                 
                     @endauth
                 </div>
             </div>

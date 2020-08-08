@@ -18,11 +18,10 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->integer('category_id')->unsigned();
-            $table->integer('tag_id')->nullable();
             $table->string('title');
             $table->string('description');
             $table->float('price');
-            $table->integer('quantity');   
+            $table->integer('phone');   
 
             $table->timestamps();
           /*  $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
