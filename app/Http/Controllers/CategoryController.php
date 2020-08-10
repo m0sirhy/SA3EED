@@ -61,7 +61,7 @@ class CategoryController extends Controller
         if ($request->has('color'))
         {
 
-            $products->where('color', 'LIKE', '%' . $request->input('color') . '%');
+            $products=Product::where('color', 'LIKE', '%' . $request->input('color') . '%')->get();
         }
 ////Packge
     //     if( $request->search){
