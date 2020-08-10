@@ -20,13 +20,14 @@ class CreateProductsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->string('title');
             $table->string('description');
+            $table->string('model');
+            $table->string('brand');
+            $table->string('color');
+            $table->string('size');
+            $table->string('space');
             $table->float('price');
-            $table->integer('phone');   
-
+            $table->integer('phone');
             $table->timestamps();
-          /*  $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');*/
         });
     }
 

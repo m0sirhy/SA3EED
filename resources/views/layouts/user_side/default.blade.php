@@ -14,7 +14,8 @@
     {{-- <script defer src="{{ asset('js/app.js') }}"></script>--}}
     {{-- <link href="{{asset('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">--}}
     
-
+    @livewireStyles
+        @livewireScripts
 </head>
 
 <body>
@@ -174,6 +175,8 @@
 
     {{--ckeditor standard--}}
     <script src="{{ asset('dashboard_files/plugins/ckeditor/ckeditor.js') }}"></script>
+
+    
 </body>
 
 

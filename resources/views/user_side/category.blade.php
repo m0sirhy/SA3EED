@@ -69,20 +69,6 @@
                     </div>
                 </div>
 
-                <div class="tt-collapse open">
-                    <h3 class="tt-collapse-title">VENDOR</h3>
-                    <div class="tt-collapse-content">
-                        <ul class="tt-list-row">
-                            <li><a href="#">Levi's</a></li>
-                            <li><a href="#">Gap</a></li>
-                            <li><a href="#">Polo</a></li>
-                            <li><a href="#">Lacoste</a></li>
-                            <li><a href="#">Guess</a></li>
-                        </ul>
-                        <a href="#" class="btn-link-02">+ More</a>
-                    </div>
-                </div>
-
 
                 <div class="tt-content-aside">
                     <a href="listing-left-column.html" class="tt-promo-03">
@@ -100,6 +86,32 @@
                             <a href="#">FILTER</a>
                         </div>
                         <div class="tt-sort">
+                            
+                    <form action="{{ route('category.show',$category->slug) }}" method="get">
+
+<div class="row">
+
+    <div class="col-md-4">
+        <input type="text" name="search" class="form-control" placeholder="@lang('site.search')" value="search">
+    </div>
+
+    <div class="col-md-4">
+        <select name="color" class="form-control">
+            <option value="">@lang('site.all_categories')</option>
+
+                <option value="red">red</option>
+                <option value="blue">blue</option>
+
+        </select>
+    </div>
+    
+    <div class="col-md-4">
+        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> @lang('site.search')</button>
+    
+    </div>
+
+</div>
+</form><!-- end of form -->
                             <select>
                                 <option value="Default Sorting">Default Sorting</option>
                                 <option value="Default Sorting">Default Sorting 02</option>
@@ -122,7 +134,7 @@
                     </div>
                     <div class="tt-product-listing row">
 
-                        @foreach($category->products as $product)
+                    @foreach($products as $product)
                         <div class="col-6 col-md-4 tt-col-item">
                             <div class="tt-product thumbprod-center">
                                 <div class="tt-image-box">
@@ -138,7 +150,7 @@
                                   
                                     <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
                                     <div class="tt-price">
-                                        {{$product->price}}
+                                        {{$product->color}}
                                     </div>
                                     <div class="tt-product-inside-hover">
                                         <div class="tt-row-btn">
@@ -150,7 +162,6 @@
                             </div>
                         </div>
                         @endforeach
-
                     </div>
                     <div class="text-center tt_product_showmore">
                         <a href="#" class="btn btn-border">LOAD MORE</a>
@@ -160,7 +171,13 @@
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </div>
 </div>
+<script>
+
+    
+</script>
 @endsection

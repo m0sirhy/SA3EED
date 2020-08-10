@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Product;
+use App\ModelFilters\Product\ProductFilter as ProductFilter;
+
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class CategoryController extends Controller
@@ -49,11 +52,24 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($slug, Request $request)
     {
         //
         $category = Category::whereSlug($slug)->first();
-        return view('user_side.category',compact('category'));
+        $products =Product::where('category_id', $category->id)->get();
+  //native
+        if ($request->has('color'))
+        {
+
+            $products->where('color', 'LIKE', '%' . $request->input('color') . '%');
+        }
+////Packge
+    //     if( $request->search){
+    //    $products= Product::filter($request->all())->get();
+    //   }
+        
+    
+        return view('user_side.category',compact('category','products'));
 
     }
 

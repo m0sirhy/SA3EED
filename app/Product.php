@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use EloquentFilter\Filterable;
 
 class Product extends Model
 {
     //
+    use Filterable;
 
     protected $guarded = ['id'];
 
@@ -24,12 +26,16 @@ class Product extends Model
         return $this->belongsTo('App\Category');
     }
 
-    public function tags(){
-        return $this->hasMany('App\Tag');
-    }
+
 
     public function favorite()
     {
         return $this->belongsTo('App\Favorite');
+    }
+
+
+    public function wear()
+    {
+        return $this->hasOne('App\Wear');
     }
 }
