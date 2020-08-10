@@ -93,6 +93,12 @@
                                 <li class="dropdown">
                                     <a href="index-rtl.html">Contact Us</a>
                                 </li>
+                                @role('SuperAdmin')
+
+                                <li class="dropdown">
+                                    <a href="/dashboard">Admin DASHBOARD</a>
+                                </li>
+                                @endrole
                             </ul>
                         </nav>
                     </div>
