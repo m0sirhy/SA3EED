@@ -8,12 +8,12 @@
                 <div class="tp-banner-container">
                     <div class="tp-banner revolution">
                         <ul>
-                            <li data-thumb="{{ asset('user_side/images/slides/01/slide-01.jpg') }}" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
-                                <img src="{{ asset('user_side/images/slides/01/slide-01.jpg') }}" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <li data-thumb="{{ asset('user_side/images/slides/01/slide-01.png') }}" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
+                                <img src="{{ asset('user_side/images/slides/01/slide-01.png') }}" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                                 <div class="tp-caption tp-caption1 lft stb" data-x="center" data-y="center" data-hoffset="0" data-voffset="0" data-speed="600" data-start="900" data-easing="Power4.easeOut" data-endeasing="Power4.easeIn">
-                                    <div class="tp-caption1-wd-1 tt-base-color">MKH</div>
-                                    <div class="tp-caption1-wd-2">Buy and <br>sell</div>
-                                    <div class="tp-caption1-wd-3">selling second hand products</div>
+                                    <div class="tp-caption1-wd-1 tt-base-color">SA3EED</div>
+                                    <div class="tp-caption1-wd-2">Buy and <br>Sell Freealy</div>
+                                    <div class="tp-caption1-wd-3"> Most simple Platform For selling SECOND HAND  <br>Products</div>
                                     <div class="tp-caption1-wd-4">
                                         @auth
                                         <button class="btn btn-xl" data-toggle="modal" data-target="#ModalAddProduct">ADD PRODUCT NOW!</button>
@@ -23,12 +23,12 @@
 
                                 </div>
                             </li>
-                            <li data-thumb="{{ asset('user_side/images/slides/01/slide-02.jpg') }}" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
-                                <img src="{{ asset('user_side/images/slides/01/slide-02.jpg') }}" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <li data-thumb="{{ asset('user_side/images/slides/01/slide-02.png') }}" data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off" data-title="Slide">
+                                <img src="{{ asset('user_side/images/slides/01/slide-02.png') }}" alt="slide1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                                 <div class="tp-caption tp-caption1 lft stb" data-x="center" data-y="center" data-hoffset="0" data-voffset="0" data-speed="600" data-start="900" data-easing="Power4.easeOut" data-endeasing="Power4.easeIn">
-                                    <div class="tp-caption1-wd-1 tt-white-color">MKH</div>
-                                    <div class="tp-caption1-wd-2 tt-white-color">selling second hand <br>products</div>
-                                    <div class="tp-caption1-wd-3 tt-white-color">selling second hand products</div>
+                                    <div class="tp-caption1-wd-1 tt-base-color">SA3EED</div>
+                                    <div class="tp-caption1-wd-2 tt-white-color"> Most simple Platform For selling SECOND HAND <br>Products</div>
+                                    <div class="tp-caption1-wd-3 tt-white-color">simple and secure platform</div>
 
 
                                     <div class="tp-caption1-wd-4">
@@ -93,8 +93,8 @@
                         <i class="icon-f-48"></i>
                     </div>
                     <div class="tt-col-description">
-                        <h4 class="tt-title">FREE SHIPPING</h4>
-                        <p>Free shipping on all US order or order above $99</p>
+                        <h4 class="tt-title">FREE Service</h4>
+                        <p>Free Service on all time</p>
                     </div>
                 </a>
             </div>
@@ -115,7 +115,7 @@
                         <i class="icon-e-09"></i>
                     </div>
                     <div class="tt-col-description">
-                        <h4 class="tt-title">30 DAYS RETURN</h4>
+                        <h4 class="tt-title">30 Your Welcome to  RETURN</h4>
                         <p>Simply return it within 24 days for an exchange.</p>
                     </div>
                 </a>

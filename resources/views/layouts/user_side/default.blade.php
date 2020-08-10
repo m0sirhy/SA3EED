@@ -13,9 +13,9 @@
 
     {{-- <script defer src="{{ asset('js/app.js') }}"></script>--}}
     {{-- <link href="{{asset('css/app.css')}}" rel="stylesheet" data-turbolinks-track="true">--}}
-    
+
     @livewireStyles
-        @livewireScripts
+    @livewireScripts
 </head>
 
 <body>
@@ -56,8 +56,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
                 </div>
                 <div class="modal-body ">
-                @auth
-                
+                    @auth
+
                     <form class="form-default" action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
@@ -80,18 +80,57 @@
                             <label>DESCRIPTION</label>
                             <textarea name="description" class="form-control ckeditor">{{ old('description') }}</textarea> </div>
                         <div class="form-group">
-                            <label>PRICE</label>
-                            <input type="number" class="form-control" name="price" value="{{old('price')}}">
-                        </div>
-                        <div class="form-group">
-                            <label>PHONE</label>
-                            <input type="number" class="form-control" name="phone" value="{{old('phone')}}">
-                        </div>
+                            <label>Brand</label>
+                            <select name="brand" class="form-control">
+                                <option value="bmw">BMW</option>
+                                <option value="hyundai">hyundai</option>
+                                <option value="kia">kia</option>
+                                <option value="skoda">skoda</option>
 
-                        <div class="form-group">
-                            <input type="submit" class="btn bt-lg"> </div>
+                            </select>
+
+
+                            <div class="form-group">
+                                <label>Color</label>
+                                <select name="color" class="form-control">
+
+                                    <option value="red">Red</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="brown">Brown</option>
+                                    <option value="white">White</option>
+                                    <option value="gray">Gray</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Year</label>
+                                <select name="model" class="form-control">
+                                    @for ($year=1900; $year <= 2020; $year++)
+                                     <option value="{{$year}}">{{$year}}</option>
+
+                                        @endfor
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>PRICE</label>
+                                <input type="number" class="form-control" name="price" value="{{old('price')}}">
+                            </div>
+
+                            <div class="form-group">
+                                <label>PHONE</label>
+                                <input type="number" class="form-control" name="phone" value="{{old('phone')}}">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn bt-lg"> </div>
                     </form>
-                 
+
                     @endauth
                 </div>
             </div>
@@ -176,7 +215,7 @@
     {{--ckeditor standard--}}
     <script src="{{ asset('dashboard_files/plugins/ckeditor/ckeditor.js') }}"></script>
 
-    
+
 </body>
 
 

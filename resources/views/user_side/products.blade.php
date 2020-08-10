@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tt-collapse open">
+                <!-- <div class="tt-collapse open">
                     <h3 class="tt-collapse-title">SORT BY</h3>
                     <div class="tt-collapse-content">
                         <ul class="tt-filter-list">
@@ -37,8 +37,8 @@
                         </ul>
                         <a href="#" class="btn-link-02">Clear All</a>
                     </div>
-                </div>
-                <div class="tt-collapse open">
+                </div> -->
+                <!-- <div class="tt-collapse open">
                     <h3 class="tt-collapse-title">PRODUCT CATEGORIES</h3>
                     <div class="tt-collapse-content">
                         <ul class="tt-list-row">
@@ -81,7 +81,7 @@
                     <a href="listing-left-column.html" class="tt-promo-03">
                         <img src="{{ asset('user_side/images/custom/listing_promo_img_07.jpg') }}" alt="">
                     </a>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-12 col-lg-9 col-xl-9">
                 <div class="content-indent container-fluid-custom-mobile-padding-02">
@@ -111,6 +111,7 @@
                             <a href="#" class="tt-col-six" data-value="tt-col-six"></a>
                         </div>
                     </div>
+                    
                     <div class="tt-product-listing row">
 
                         @foreach($products as $product)
@@ -144,7 +145,7 @@
 
                     </div>
                     <div class="text-center tt_product_showmore">
-                        <a href="#" class="btn btn-border">sad</a>
+                        <a href="#" class="btn btn-border">Load More</a>
                         <div class="tt_item_all_js">
                             <a href="#" class="btn btn-border01">NO MORE ITEM TO SHOW</a>
                         </div>

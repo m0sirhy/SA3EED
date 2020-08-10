@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tt-collapse open">
+                <!-- <div class="tt-collapse open">
                     <h3 class="tt-collapse-title">SORT BY</h3>
                     <div class="tt-collapse-content">
                         <ul class="tt-filter-list">
@@ -66,12 +66,12 @@
                             <li><a href="#">$150 — $200</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
 
                 <div class="tt-content-aside">
                     <a href="listing-left-column.html" class="tt-promo-03">
-                        <img src="{{ asset('user_side/images/custom/listing_promo_img_07.jpg') }}" alt="">
+                        <!-- <img src="{{ asset('user_side/images/custom/listing_promo_img_07.jpg') }}" alt=""> -->
                     </a>
                 </div>
             </div>
@@ -91,16 +91,23 @@
                                 <div class="row">
 
                                     <div class="col-md-2">
-                                        <input type="text" name="search" class="form-control" placeholder="@lang('site.search')" value="search">
+                                        <input type="text" name="search" class="form-control" placeholder="SEARCH" value="search">
                                     </div>
 
                                     <div class="col-md-3">
                                         <select name="color" class="form-control">
                                             <option value="">Color</option>
 
-                                            <option value="red">red</option>
-                                            <option value="blue">blue</option>
-
+                                            <option value="red">Red</option>
+                                            <option value="pink">Pink</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="purple">Purple</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="brown">Brown</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
                                         </select>
                                     </div>
 
@@ -124,7 +131,7 @@
                                     </div>
 
                                     <div class="col-md-4">
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> @lang('site.search')</button>
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> SEARCH</button>
 
                                     </div>
 
