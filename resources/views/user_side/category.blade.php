@@ -1,11 +1,10 @@
-
 @extends('layouts.user_side.default')
 @section('content')
-    <div class="tt-breadcrumb">
-        @include('includes.user_side.breedCrumb')
+<div class="tt-breadcrumb">
+    @include('includes.user_side.breedCrumb')
 
-    </div>
-    <div class="container-indent">
+</div>
+<div class="container-indent">
     <div class="container">
         <div class="row flex-sm-row-reverse">
             <div class="col-md-4 col-lg-3 col-xl-3 leftColumn rightColumn aside">
@@ -64,7 +63,7 @@
                             <li class="active"><a href="#">$0 — $50</a></li>
                             <li><a href="#">$50 — $100</a></li>
                             <li><a href="#">$100 — $150</a></li>
-                            <li><a href="#">$150 —  $200</a></li>
+                            <li><a href="#">$150 — $200</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,49 +79,58 @@
                 <div class="content-indent container-fluid-custom-mobile-padding-02">
                     <div class="tt-filters-options">
                         <h1 class="tt-title">
-                          {{$category->name}}<span class="tt-title-total">({{$category->products->count()}})</span>
+                            {{$category->name}}<span class="tt-title-total">({{$category->products->count()}})</span>
                         </h1>
                         <div class="tt-btn-toggle">
                             <a href="#">FILTER</a>
                         </div>
                         <div class="tt-sort">
-                            
-                    <form action="{{ route('category.show',$category->slug) }}" method="get">
 
-<div class="row">
+                            <form action="{{ route('category.show',$category->slug) }}" method="get">
 
-    <div class="col-md-2">
-        <input type="text" name="search" class="form-control" placeholder="@lang('site.search')" value="search">
-    </div>
+                                <div class="row">
 
-    <div class="col-md-3">
-        <select name="color" class="form-control">
-            <option value="">Color</option>
+                                    <div class="col-md-2">
+                                        <input type="text" name="search" class="form-control" placeholder="@lang('site.search')" value="search">
+                                    </div>
 
-                <option value="red">red</option>
-                <option value="blue">blue</option>
+                                    <div class="col-md-3">
+                                        <select name="color" class="form-control">
+                                            <option value="">Color</option>
 
-        </select>
-    </div>
-     
-    <div class="col-md-3">
-    <select name="brand" class="form-control">
-            <option value="">Brand</option>
+                                            <option value="red">red</option>
+                                            <option value="blue">blue</option>
 
-                <option value="bmw">bmw</option>
-                <option value="renu">renu</option>
+                                        </select>
+                                    </div>
 
-        </select>    
-    </div>
-    
-    <div class="col-md-4">
-        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> @lang('site.search')</button>
-    
-    </div>
+                                    <div class="col-md-3">
+                                        <select name="brand" class="form-control">
+                                            <option value="">Brand</option>
 
-</div>
-</form><!-- end of form -->
-                          
+                                            <option value="bmw">bmw</option>
+                                            <option value="renu">renu</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="model" class="form-control">
+                                            <option value="">Model</option>
+
+                                            <option value="1990">1990</option>
+                                            <option value="2000">2000</option>
+
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> @lang('site.search')</button>
+
+                                    </div>
+
+                                </div>
+                            </form><!-- end of form -->
+
                         </div>
                         <div class="tt-quantity">
                             <a href="#" class="tt-col-one" data-value="tt-col-one"></a>
@@ -134,27 +142,27 @@
                     </div>
                     <div class="tt-product-listing row">
 
-                    @foreach($products as $product)
+                        @foreach($products as $product)
                         <div class="col-6 col-md-4 tt-col-item">
                             <div class="tt-product thumbprod-center">
                                 <div class="tt-image-box">
 
                                     <a href="{{route('product.show',$product->id)}}">
-                                            <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $product->productimages->first()->image_path  }}" alt=""></span>
+                                        <span class="tt-img-roll-over"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $product->productimages->first()->image_path  }}" alt=""></span>
 
                                         <span class="tt-img"><img src="{{ asset('user_side/images/loader.svg') }}" data-src="{{ $product->productimages->first()->image_path  }}" alt=""></span>
 
                                     </a>
                                 </div>
                                 <div class="tt-description">
-                                  
+
                                     <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
                                     <div class="tt-price">
                                         {{$product->color}}
                                     </div>
                                     <div class="tt-product-inside-hover">
                                         <div class="tt-row-btn">
-                                            <a href="{{route('product.show',$product->id)}}" class="btn btn-sm" ><i class="icon-e-46"></i>More Details</a>
+                                            <a href="{{route('product.show',$product->id)}}" class="btn btn-sm"><i class="icon-e-46"></i>More Details</a>
                                         </div>
 
                                     </div>
@@ -172,12 +180,12 @@
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 </div>
 <script>
 
-    
+
 </script>
 @endsection
