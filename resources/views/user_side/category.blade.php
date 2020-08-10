@@ -91,18 +91,28 @@
 
 <div class="row">
 
-    <div class="col-md-4">
+    <div class="col-md-2">
         <input type="text" name="search" class="form-control" placeholder="@lang('site.search')" value="search">
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <select name="color" class="form-control">
-            <option value="">@lang('site.all_categories')</option>
+            <option value="">Color</option>
 
                 <option value="red">red</option>
                 <option value="blue">blue</option>
 
         </select>
+    </div>
+     
+    <div class="col-md-3">
+    <select name="brand" class="form-control">
+            <option value="">Brand</option>
+
+                <option value="bmw">bmw</option>
+                <option value="renu">renu</option>
+
+        </select>    
     </div>
     
     <div class="col-md-4">
@@ -112,17 +122,7 @@
 
 </div>
 </form><!-- end of form -->
-                            <select>
-                                <option value="Default Sorting">Default Sorting</option>
-                                <option value="Default Sorting">Default Sorting 02</option>
-                                <option value="Default Sorting">Default Sorting 03</option>
-                            </select>
-                            <select>
-                                <option value="Show">Show</option>
-                                <option value="9">9</option>
-                                <option value="16">16</option>
-                                <option value="32">32</option>
-                            </select>
+                          
                         </div>
                         <div class="tt-quantity">
                             <a href="#" class="tt-col-one" data-value="tt-col-one"></a>

@@ -63,12 +63,13 @@ class CategoryController extends Controller
 
             $products=Product::where('color', 'LIKE', '%' . $request->input('color') . '%')->get();
         }
-////Packge
-    //     if( $request->search){
-    //    $products= Product::filter($request->all())->get();
-    //   }
-        
-    
+
+        if($request->has('brand'))
+        {
+            $products=Product::where('brand', 'LIKE', '%' . $request->input('brand') . '%')->get();
+
+        }
+
         return view('user_side.category',compact('category','products'));
 
     }
