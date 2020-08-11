@@ -31,7 +31,7 @@ class UserController extends Controller
     public function index()
     {
         //
-       $users=User::role('admin')->get();
+       $users=User::role('admin')->latest()->paginate(5);;
         return view('dashboard.users.index',compact('users'));
     }
 

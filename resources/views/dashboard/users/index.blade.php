@@ -29,14 +29,9 @@
 
                         <div class="row">
 
-                            <div class="col-md-4">
-                                <input type="text" name="search" class="form-control" placeholder="@lang('site.search')"
-                                       value="{{ request()->search }}">
-                            </div>
 
                             <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary"><i
-                                            class="fa fa-search"></i> @lang('site.search')</button>
+                            
                                 @can('user-create')
 
                                     <a href="{{ route('dashboard.users.create') }}" class="btn btn-primary"><i
@@ -60,8 +55,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>@lang('site.first_name')</th>
-                            <th>@lang('site.last_name')</th>
+                            <th>@lang('site.name')</th>
                             <th>@lang('site.email')</th>
                             <th>@lang('site.image')</th>
                             <th>@lang('site.action')</th>
@@ -75,7 +69,6 @@
                                 <tr>
                                     <td>{{$user->id}}</td>
                                     <td> {{$user->user_name}}</td>
-                                    <td> {{$user->user_info->first_name}}</td>
                                     <td>{{$user->email}} </td>
                                     <td><img src="{{$user->image_path}} " style="width: 100px;" class="img-thumbnail"
                                              alt=""></td>
@@ -115,6 +108,7 @@
 
                     </table><!-- end of table -->
 
+                    {{ $users->links() }}
 
                 </div><!-- end of box body -->
 

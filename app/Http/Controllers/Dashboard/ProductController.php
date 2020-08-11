@@ -34,11 +34,11 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         //
-        $products = Product::get()->when($request->category_id, function ($q) use ($request) {
+        $products = Product::when($request->category_id, function ($q) use ($request) {
 
             return $q->where('category_id', $request->category_id);
 
-        });
+        })->latest()->paginate(5);
         return view('Dashboard.products.index', compact('products'));
     }
 

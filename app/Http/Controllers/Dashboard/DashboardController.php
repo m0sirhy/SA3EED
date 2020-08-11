@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Category;
+use App\User;
+use App\Product;
 
 class DashboardController extends Controller
 {
@@ -15,8 +18,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
-        return view('dashboard.welcome');
+        // 
+        $category=Category::get()->count();
+        $user=User::get()->count();
+        $product=Product::get()->count();
+
+        return view('dashboard.welcome',compact('category','user','product'));
     }
 
     /**

@@ -25,12 +25,8 @@
                     <form action="{{ route('dashboard.categories.index') }}" method="get">
                         <div class="row">
 
-                            <div class="col-md-4">
-                                <input type="text" name="search" class="form-control" placeholder="@lang('site.search')" value="{{ request()->search }}">
-                            </div>
 
                             <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> @lang('site.search')</button>
                               @can('category-create')
                                     <a href="{{ route('dashboard.categories.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> @lang('site.add')</a>
                                 @else
@@ -86,6 +82,7 @@
                             </tbody>
 
                         </table><!-- end of table -->
+                        {{ $categories->links() }}
 
 
                     @else

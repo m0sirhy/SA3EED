@@ -29,21 +29,11 @@
 
                         <div class="row">
 
-                            <div class="col-md-4">
-                                <input type="text" name="search" class="form-control" placeholder="@lang('site.search')"
-                                       value="{{ request()->search }}">
-                            </div>
+
+                          
 
                             <div class="col-md-4">
-                                <select name="category_id" class="form-control">
-                                    <option value="">@lang('site.all_categories')</option>
-                                    <option value=""> $category->name</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-primary"><i
-                                            class="fa fa-search"></i> @lang('site.search')</button>
+                              
                                 @can('product-create')
                                     <a href="{{ route('dashboard.products.create') }}" class="btn btn-primary"><i
                                                 class="fa fa-plus"></i> @lang('site.add')</a>
@@ -133,6 +123,7 @@
 
                         </table><!-- end of table -->
 
+                        {{ $products->links() }}
 
                     @else
 

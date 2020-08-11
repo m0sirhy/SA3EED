@@ -35,16 +35,7 @@
                         <label>@lang('site.user_name')</label>
                         <input type="text" name="user_name" class="form-control" value="{{ old('user_name') }}">
                     </div>
-                    <div class="form-group">
-                        <label>@lang('site.first_name')</label>
-                        <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}">
-                    </div>
-
-                    <div class="form-group">
-                        <label>@lang('site.last_name')</label>
-                        <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}">
-                    </div>
-
+                   
                     <div class="form-group">
                         <label>@lang('site.email')</label>
                         <input type="email" name="email" class="form-control" value="{{ old('email') }}">
