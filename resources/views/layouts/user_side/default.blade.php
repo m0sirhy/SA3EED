@@ -6,6 +6,7 @@
 <head>
 
     @include('includes.user_side.head')
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     {{--noty--}}
     <link rel="stylesheet" href="{{ asset('dashboard_files/plugins/noty/noty.css') }}">
@@ -48,94 +49,7 @@
     <footer>
         @include('includes.user_side.footer')
     </footer>
-    <!-- Modal (AddProduct) -->
-    <div class="modal fade" id="ModalAddProduct" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true" data-pause=3500>
-        <div class="modal-dialog  modal-lg">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
-                </div>
-                <div class="modal-body ">
-                    @auth
-
-                    <form class="form-default" action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group">
-                            <label>IMAGE</label>
-                            <input type="file" name="image[]" class="form-control image" multiple>
-                        </div>
-                        <div class="form-group">
-                            <label>CATEGORIES</label>
-                            <select name="category_id" class="form-control">
-                                @foreach (App\Category::get() as $category)
-                                <option value=" {{$category->id }}" {{old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>TITLE</label>
-                            <input type="text" class="form-control" name="title" value="{{old('title')}}">
-                        </div>
-                        <div class="form-group">
-                            <label>DESCRIPTION</label>
-                            <textarea name="description" class="form-control ckeditor">{{ old('description') }}</textarea> </div>
-                        <div class="form-group">
-                            <label>Brand</label>
-                            <select name="brand" class="form-control">
-                                <option value="bmw">BMW</option>
-                                <option value="hyundai">hyundai</option>
-                                <option value="kia">kia</option>
-                                <option value="skoda">skoda</option>
-
-                            </select>
-
-
-                            <div class="form-group">
-                                <label>Color</label>
-                                <select name="color" class="form-control">
-
-                                    <option value="red">Red</option>
-                                    <option value="pink">Pink</option>
-                                    <option value="orange">Orange</option>
-                                    <option value="yellow">Yellow</option>
-                                    <option value="purple">Purple</option>
-                                    <option value="green">Green</option>
-                                    <option value="blue">Blue</option>
-                                    <option value="brown">Brown</option>
-                                    <option value="white">White</option>
-                                    <option value="gray">Gray</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Year</label>
-                                <select name="model" class="form-control">
-                                    @for ($year=1900; $year <= 2020; $year++)
-                                     <option value="{{$year}}">{{$year}}</option>
-
-                                        @endfor
-
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>PRICE</label>
-                                <input type="number" class="form-control" name="price" value="{{old('price')}}">
-                            </div>
-
-                            <div class="form-group">
-                                <label>PHONE</label>
-                                <input type="number" class="form-control" name="phone" value="{{old('phone')}}">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="submit" class="btn bt-lg"> </div>
-                    </form>
-
-                    @endauth
-                </div>
-            </div>
-        </div>
-    </div> <!-- Modal (Login) -->
+    <!-- Modal (Login) -->
     <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true" data-pause=3500>
         <div class="modal-dialog modal-discount">
             <div class="modal-content ">
@@ -216,6 +130,243 @@
     <script src="{{ asset('dashboard_files/plugins/ckeditor/ckeditor.js') }}"></script>
 
 
+    <!-- Modal (AddProduct) -->
+    <div class="modal fade" id="ModalAddProduct" tabindex="-1" role="dialog" aria-label="myModalLabel" aria-hidden="true" data-pause=3500>
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon icon-clear"></span></button>
+                </div>
+                <div class="modal-body ">
+                    @auth
+
+                    <form class="form-default" action="{{ route('product.store') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label>IMAGE</label>
+                            <input type="file" name="image[]" class="form-control image" multiple>
+                        </div>
+                        <div class="form-group">
+                            <label>CATEGORIES</label>
+                            <select id="category" name="category_id" class="form-control">
+                                <option value="">All Category</option>
+                                @foreach (App\Category::get() as $category)
+                                <option value="{{$category->name }}" {{old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div id="cars" class="row" style="display:none">
+                            <div class=" form-group col-sm">
+
+                                <label>Year</label>
+                                <select name="model" class="form-control">
+                                    <option value="">year</option>
+                                    @for ($year=1970; $year <= 2020; $year++) <option value="{{$year}}">{{$year}}</option>
+
+                                        @endfor
+
+                                </select>
+
+                            </div>
+                            <div class="form-group col-sm">
+                                <label>Brand</label>
+                                <select name="brand" class="form-control">
+                                    <option value="">Brand</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="subaru">SUBARU</option>
+                                    <option value="skoda ">SKODA</option>
+                                    <option value="toyota ">TOYOTA</option>
+                                    <option value="mazda">MAZDA</option>
+                                    <option value="daewoo">Daewoo</option>
+                                    <option value="ford">Ford</option>
+                                    <option value="honda">Honda</option>
+                                    <option value="hyundai">Hyundai</option>
+                                    <option value="isuzu">Isuzu</option>
+                                    <option value="kia">Kia</option>
+                                    <option value="mitsubishi">Mitsubishi</option>
+                                    <option value="nissan">Nissan</option>
+                                    <option value="peugeot">Peugeot</option>
+                                    <option value="subaru">Subaru</option>
+                                    <option value="suzuki">Suzuki</option>
+                                    <option value="volkswagen">Volkswagen</option>
+                                </select>
+                            </div>
+                            <div class=" form-group col-sm">
+
+                                <label>Color</label>
+                                <select name="color" class="form-control">
+                                    <option value="">Color</option>
+
+                                    <option value="red">Red</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="brown">Brown</option>
+                                    <option value="white">White</option>
+                                    <option value="gray">Gray</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div id="wears" class="row" style="display:none">
+
+                            <div class="form-group col-sm">
+                                <label>Color</label>
+                                <select name="color" class="form-control">
+
+                                    <option value="red">Red</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="green">Green</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="brown">Brown</option>
+                                    <option value="white">White</option>
+                                    <option value="gray">Gray</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label>TYPE</label>
+                                <select name="type" class="form-control">
+                                    <option value="sweater">SWEATER</option>
+                                    <option value="jeans">JEANS</option>
+                                    <option value="cap">CAP</option>
+                                    <option value="suits">SUITS</option>
+                                    <option value="shorts">SHORTS</option>
+                                    <option value="shirts">SHIRTS</option>
+                                    <option value="t_shirts">T-SHIRTS</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label>SIZE</label>
+                                <select name="size" class="form-control">
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                    <option value="xxl">XXL</option>
+                                    <option value="xxxl">XXXL</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="electronics" class="row" style="display:none">
+
+
+                            <div class="form-group col-sm">
+                                <label>TYPE</label>
+                                <select name="type" class="form-control">
+                                    <option value="">TYPE</option>
+                                    <option value="mobile">MOBILE</option>
+                                    <option value="tv">TV</option>
+                                    <option value="washin_machine">Washing machine</option>
+                                    <option value="refrigerator">Refrigerator</option>
+                                    <option value="camera">Camera</option>
+                                    <option value="fan">Fan</option>
+                                    <option value="iron">Iron</option>
+                                    <option value="cooker">Cooker</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm">
+                                <label>BRAND</label>
+                                <select name="brand" class="form-control">
+                                    <option value="">BRAND</option>
+
+                                    <option value="lg">LG</option>
+                                    <option value="samsung">SAMSUNG</option>
+                                    <option value="haier">HAIER</option>
+                                    <option value="huawei">HUAWEI</option>
+                                    <option value="iphone">IPHONE</option>
+                                    <option value="chmc">CHMC</option>
+                                    <option value="other">OTHER</option>
+                                </select>
+                            </div>
+                        </div>
+                          <div id="real-state" class="row" style="display:none">
+
+
+                            <div class="form-group col-md">
+                                <label>SPACE IN meters</label>
+                              <input type="number"  class="form-control" name="space">
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <label>TITLE</label>
+                            <input type="text" class="form-control" name="title" value="{{old('title')}}">
+                        </div>
+                        <div class="form-group">
+                            <label>DESCRIPTION</label>
+                            <textarea name="description" class="form-control ckeditor">{{ old('description') }}</textarea> </div>
+
+                        <div class="form-group">
+                            <label>PRICE</label>
+                            <input type="number" class="form-control" name="price" value="{{old('price')}}">
+                        </div>
+
+                        <div id="phone" class="form-group">
+                            <label>PHONE</label>
+                            <input type="number" class="form-control" name="phone" value="{{old('phone')}}">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" class="btn bt-lg"> </div>
+                    </form>
+
+                    @endauth
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#category').on('change', function() {
+                if (this.value == 'CARS') {
+                    $("#cars").show();
+                    $('#electronics').hide();
+                    $("#wears").hide();
+                    $('#real-state').hide();
+
+                } else if (this.value == 'WEARS') {
+                    $("#cars").hide();
+                    $('#electronics').hide();
+                    $('#wears').show();
+                    $('#real-state').hide();
+
+                } else if (this.value == 'ELECTRONICS') {
+                    $('#electronics').show();
+                    $("#cars").hide();
+                    $("#wears").hide();
+                    $('#real-state').hide();
+
+                } 
+                else if (this.value == 'REAL STATE') {
+                    $('#real-state').show();
+                    $("#cars").hide();
+                    $("#wears").hide();
+                    $('#electronics').hide();
+
+
+                } else {
+                    $("#cars").hide();
+                    $('#wears').hide();
+                    $('#real-state').hide();
+
+                }
+            });
+        });
+    </script>
 </body>
 
 

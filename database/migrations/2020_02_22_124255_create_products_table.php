@@ -18,15 +18,16 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->integer('category_id')->unsigned();
-            $table->string('title');
+            $table->text('title');
             $table->longText('description');
-            $table->string('model');
-            $table->string('brand');
-            $table->string('color');
-            $table->string('size');
-            $table->string('space');
+            $table->string('model')->nullable();
+            $table->string('brand')->nullable();
+            $table->string('color')->nullable();
+            $table->string('size')->nullable();
+            $table->string('type')->nullable();
+            $table->string('space')->nullable();
             $table->float('price');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->timestamps();
         });
     }

@@ -85,19 +85,17 @@
                             <a href="#">FILTER</a>
                         </div>
                         <div class="tt-sort">
-
                             <form action="{{ route('category.show',$category->slug) }}" method="get">
 
+                                @if($category->name == 'CARS')
                                 <div class="row">
+                                    <div class="form-group col-sm">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> SEARCH</button>
 
-                                    <div class="col-md-2">
-                                        <input type="text" name="search" class="form-control" placeholder="SEARCH" value="search">
                                     </div>
-
-                                    <div class="col-md-3">
+                                    <div class=" form-group col-sm">
                                         <select name="color" class="form-control">
                                             <option value="">Color</option>
-
                                             <option value="red">Red</option>
                                             <option value="pink">Pink</option>
                                             <option value="orange">Orange</option>
@@ -111,34 +109,147 @@
                                         </select>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="form-group col-sm">
                                         <select name="brand" class="form-control">
                                             <option value="">Brand</option>
-
-                                            <option value="bmw">bmw</option>
-                                            <option value="renu">renu</option>
+                                            <option value="bmw">BMW</option>
+                                            <option value="subaru">SUBARU</option>
+                                            <option value="skoda ">SKODA</option>
+                                            <option value="toyota ">TOYOTA</option>
+                                            <option value="mazda">MAZDA</option>
+                                            <option value="daewoo">Daewoo</option>
+                                            <option value="ford">Ford</option>
+                                            <option value="honda">Honda</option>
+                                            <option value="hyundai">Hyundai</option>
+                                            <option value="isuzu">Isuzu</option>
+                                            <option value="kia">Kia</option>
+                                            <option value="mitsubishi">Mitsubishi</option>
+                                            <option value="nissan">Nissan</option>
+                                            <option value="peugeot">Peugeot</option>
+                                            <option value="subaru">Subaru</option>
+                                            <option value="suzuki">Suzuki</option>
+                                            <option value="volkswagen">Volkswagen</option>
 
                                         </select>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="form-group col-sm">
                                         <select name="model" class="form-control">
                                             <option value="">Model</option>
+                                            @for ($year=1970; $year <= 2020; $year++) <option value="{{$year}}">{{$year}}</option>
 
-                                            <option value="1990">1990</option>
-                                            <option value="2000">2000</option>
+                                                @endfor
 
                                         </select>
                                     </div>
+                                    <div class="form-group col-md">
+                                        <select name="price" class="form-control" onchange="this.form.submit()">
+                                            <option value="">By Price</option>
+                                            <option value="asc">ASC</option>
+                                            <option name="desc">DESC</option>
 
-                                    <div class="col-md-4">
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> SEARCH</button>
-
+                                        </select>
+                                    </div>
+                                </div>
+                                @elseif($category->name == 'WEARS')
+                                <div class="row">
+                                    <div class=" col-sm">
+                                        <select name="color" class="form-control">
+                                            <option value="">Color</option>
+                                            <option value="red">Red</option>
+                                            <option value="pink">Pink</option>
+                                            <option value="orange">Orange</option>
+                                            <option value="yellow">Yellow</option>
+                                            <option value="purple">Purple</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                            <option value="brown">Brown</option>
+                                            <option value="white">White</option>
+                                            <option value="gray">Gray</option>
+                                        </select>
                                     </div>
 
+                                    <div class="col-sm">
+                                        <select name="type" class="form-control">
+                                            <option value="sweater">SWEATER</option>
+                                            <option value="jeans">JEANS</option>
+                                            <option value="cap">CAP</option>
+                                            <option value="suits">SUITS</option>
+                                            <option value="shorts">SHORTS</option>
+                                            <option value="shirts">SHIRTS</option>
+                                            <option value="t_shirts">T-SHIRTS</option>
+
+                                        </select>
+                                    </div>
+                                    <div class=" col-sm">
+                                        <select name="size" class="form-control">
+                                            <option value="xs">XS</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                            <option value="l">L</option>
+                                            <option value="xl">XL</option>
+                                            <option value="xxl">XXL</option>
+                                            <option value="xxxl">XXXL</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <select onchange="this.form.submit()">
+                                            <option value="">Sort By Price</option>
+                                            <option name="min">ASC</option>
+                                            <option name="max">DESC</option>
+
+                                        </select>
+                                    </div>
                                 </div>
+
+                                @elseif($category->name == 'ELECTRONICS')
+                                <div class="row">
+                                    <div class=" col-sm">
+                                        <label>TYPE</label>
+                                        <select name="type" class="form-control">
+                                            <option value="">TYPE</option>
+                                            <option value="mobile">MOBILE</option>
+                                            <option value="tv">TV</option>
+                                            <option value="washin_machine">Washing machine</option>
+                                            <option value="refrigerator">Refrigerator</option>
+                                            <option value="camera">Camera</option>
+                                            <option value="fan">Fan</option>
+                                            <option value="iron">Iron</option>
+                                            <option value="cooker">Cooker</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm">
+                                        <label>BRAND</label>
+                                        <select name="brand" class="form-control">
+                                            <option value="">BRAND</option>
+
+                                            <option value="lg">LG</option>
+                                            <option value="samsung">SAMSUNG</option>
+                                            <option value="haier">HAIER</option>
+                                            <option value="huawei">HUAWEI</option>
+                                            <option value="iphone">IPHONE</option>
+                                            <option value="chmc">CHMC</option>
+                                            <option value="other">OTHER</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm">
+                                        <select class="form-control" onchange="this.form.submit()">
+                                            <option value="">Sort By Price</option>
+                                            <option name="min">ASC</option>
+                                            <option name="max">DESC</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                @else
+                                null
+                                @endif
+
+
+
                             </form><!-- end of form -->
 
                         </div>
+
                         <div class="tt-quantity">
                             <a href="#" class="tt-col-one" data-value="tt-col-one"></a>
                             <a href="#" class="tt-col-two" data-value="tt-col-two"></a>
@@ -147,7 +258,7 @@
                             <a href="#" class="tt-col-six" data-value="tt-col-six"></a>
                         </div>
                     </div>
-                    <div class="tt-product-listing row">
+                    <div class="tt-product-listing row" id="product-row">
 
                         @foreach($products as $product)
                         <div class="col-6 col-md-4 tt-col-item">
@@ -179,7 +290,7 @@
                         @endforeach
                     </div>
                     <div class="text-center tt_product_showmore">
-                        <a href="#" class="btn btn-border">LOAD MORE</a>
+                        <a href="#" id="load-more" class="btn btn-border">LOAD MORE</a>
                         <div class="tt_item_all_js">
                             <a href="#" class="btn btn-border01">NO MORE ITEM TO SHOW</a>
                         </div>
@@ -191,8 +302,5 @@
         </div>
     </div>
 </div>
-<script>
 
-
-</script>
 @endsection

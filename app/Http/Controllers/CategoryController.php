@@ -57,6 +57,7 @@ class CategoryController extends Controller
         //
         $category = Category::whereSlug($slug)->first();
         $products =Product::where('category_id', $category->id)->get();
+      
   //native
         if ($request->has('color'))
         {
@@ -75,7 +76,10 @@ class CategoryController extends Controller
             $products=Product::where('model', 'LIKE', '%' . $request->input('model') . '%')->get();
 
         }
-
+        if($request->price !=null)
+        {
+            $products=Product::orderBy('price',  $request->input('price'))->get();
+        }
         return view('user_side.category',compact('category','products'));
 
     }
