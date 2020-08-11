@@ -89,7 +89,7 @@
                         <div class="tt-btn-toggle">
                             <a href="#">FILTER</a>
                         </div>
-                        <div class="tt-sort">
+                        <!-- <div class="tt-sort">
 
                             <form action="{{ route('category.show',$category->slug) }}" method="get">
 
@@ -143,7 +143,7 @@
                                 </div>
                             </form><!-- end of form -->
 
-                        </div>
+                        </div> -->
                         <div class="tt-quantity">
                             <a href="#" class="tt-col-one" data-value="tt-col-one"></a>
                             <a href="#" class="tt-col-two" data-value="tt-col-two"></a>
@@ -171,7 +171,7 @@
 
                                     <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
                                     <div class="tt-price">
-                                        {{$product->price}}
+                                        {{$product->price}}₪
                                     </div>
                                     <div class="tt-product-inside-hover">
                                         <div class="tt-row-btn">

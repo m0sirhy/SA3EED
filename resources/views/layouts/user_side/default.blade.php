@@ -151,7 +151,7 @@
                             <select id="category" name="category_id" class="form-control">
                                 <option value="">All Category</option>
                                 @foreach (App\Category::get() as $category)
-                                <option value="{{$category->name }}" {{old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                <option value="{{$category->id}}" {{old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -332,26 +332,26 @@
     <script>
         $(document).ready(function() {
             $('#category').on('change', function() {
-                if (this.value == 'CARS') {
+                if (this.value == '2') {
                     $("#cars").show();
                     $('#electronics').hide();
                     $("#wears").hide();
                     $('#real-state').hide();
 
-                } else if (this.value == 'WEARS') {
+                } else if (this.value == '3') {
                     $("#cars").hide();
                     $('#electronics').hide();
                     $('#wears').show();
                     $('#real-state').hide();
 
-                } else if (this.value == 'ELECTRONICS') {
+                } else if (this.value == '1') {
                     $('#electronics').show();
                     $("#cars").hide();
                     $("#wears").hide();
                     $('#real-state').hide();
 
                 } 
-                else if (this.value == 'REAL STATE') {
+                else if (this.value == '5') {
                     $('#real-state').show();
                     $("#cars").hide();
                     $("#wears").hide();
@@ -364,6 +364,16 @@
                     $('#real-state').hide();
 
                 }
+            });
+        });
+    </script>
+        
+        <script>
+        $(document).ready(function(e) {
+            $('#contact').on('click', function(e) {
+                e.preventDefault();
+                    $('#card').show();
+                
             });
         });
     </script>

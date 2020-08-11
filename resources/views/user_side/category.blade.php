@@ -145,13 +145,17 @@
                                         <select name="price" class="form-control" onchange="this.form.submit()">
                                             <option value="">By Price</option>
                                             <option value="asc">ASC</option>
-                                            <option name="desc">DESC</option>
+                                            <option value="desc">DESC</option>
 
                                         </select>
                                     </div>
                                 </div>
                                 @elseif($category->name == 'WEARS')
                                 <div class="row">
+                                    <div class="form-group col-sm">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> SEARCH</button>
+
+                                    </div>
                                     <div class=" col-sm">
                                         <select name="color" class="form-control">
                                             <option value="">Color</option>
@@ -191,11 +195,11 @@
                                             <option value="xxxl">XXXL</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-sm">
-                                        <select onchange="this.form.submit()">
+                                    <div class="col-sm">
+                                        <select  name="price" class="form-control" onchange="this.form.submit()">
                                             <option value="">Sort By Price</option>
-                                            <option name="min">ASC</option>
-                                            <option name="max">DESC</option>
+                                            <option value="asc">ASC</option>
+                                            <option value="desc">DESC</option>
 
                                         </select>
                                     </div>
@@ -203,8 +207,11 @@
 
                                 @elseif($category->name == 'ELECTRONICS')
                                 <div class="row">
+                                    <div class="form-group col-sm">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> SEARCH</button>
+
+                                    </div>
                                     <div class=" col-sm">
-                                        <label>TYPE</label>
                                         <select name="type" class="form-control">
                                             <option value="">TYPE</option>
                                             <option value="mobile">MOBILE</option>
@@ -218,7 +225,6 @@
                                         </select>
                                     </div>
                                     <div class="col-sm">
-                                        <label>BRAND</label>
                                         <select name="brand" class="form-control">
                                             <option value="">BRAND</option>
 
@@ -232,16 +238,23 @@
                                         </select>
                                     </div>
                                     <div class="col-sm">
-                                        <select class="form-control" onchange="this.form.submit()">
+                                        <select class="form-control" name="price" onchange="this.form.submit()">
                                             <option value="">Sort By Price</option>
-                                            <option name="min">ASC</option>
-                                            <option name="max">DESC</option>
+                                            <option value="asc">ASC</option>
+                                            <option value="desc">DESC</option>
 
                                         </select>
                                     </div>
                                 </div>
                                 @else
-                                null
+                                <div class="col-sm">
+                                        <select class="form-control" name="price" onchange="this.form.submit()">
+                                            <option value="">Sort By Price</option>
+                                            <option value="asc">ASC</option>
+                                            <option value="desc">DESC</option>
+
+                                        </select>
+                                    </div>
                                 @endif
 
 
@@ -276,7 +289,8 @@
 
                                     <h2 class="tt-title"><a href="{{route('product.show',$product->id)}}">{{$product->title}}</a></h2>
                                     <div class="tt-price">
-                                        {{$product->color}}
+                                        ₪
+                                        {{$product->price}}
                                     </div>
                                     <div class="tt-product-inside-hover">
                                         <div class="tt-row-btn">

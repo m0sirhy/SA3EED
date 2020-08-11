@@ -35,7 +35,7 @@
             </div>
             <div class="col-6">
                 <div class="tt-product-single-info">
-                 
+
                     <h1 class="tt-title">{{$product->title}}</h1>
                     <div class="tt-price">
                         <span class="new-price">{{$product->price}} ₪</span>
@@ -46,13 +46,37 @@
 
                     <div class="tt-wrapper">
                         <div class="tt-row-custom-01">
-                          
+
                             <div class="col-item">
 
 
-                                <a href="#" class="btn btn-lg" data-toggle="modal" data-target="#ModalView"><i class="icon-f-93"></i>Contact</a>
+                                <a href="#" class="btn btn-lg" id="contact"><i class="icon-f-93"></i>Contact</a>
+                                <br>
+                                <div class="mx-auto col-item" id="card" style="display:none">
+                                <br>
+ 
+                                <div class="tt-avatar">
+                                        <a href="#"> <img src="{{asset('user_side/images/product/single/review-comments-img-02.png')}}" alt="" class="loading" data-was-processed="true">
+                                        </a>
+                                    </div>
+                                    <div class="tt-content">
 
+                                        <div class="tt-comments-info">
+                                            <h4>USER NAME :<a href="#" class="text-primary">{{$product->user->user_name}}</a></h4>
+                                            <h4>MOBILE : <a class="text-primary"  href="tel:{{$product->phone}}">{{$product->phone}}</a></h4>
+
+                                            <span class="username">by <span>ADAM</span></span>
+                                            <span class="time">on January 14, 2017</span>
+                                        </div>
+                                        <div class="tt-comments-title">Very Good!</div>
+                                        <p>
+                                            Diusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+
+
                         </div>
                     </div>
 
@@ -76,7 +100,7 @@
                                             <td>{{$product->phone}}</td>
                                         </tr>
 
-                                       
+
 
 
                                     </tbody>
@@ -172,5 +196,7 @@
                 </div>
             </div>
         </div>
+
+    
 
         @endsection
