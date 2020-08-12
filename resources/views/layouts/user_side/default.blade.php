@@ -172,6 +172,8 @@
                             <div class="form-group col-sm">
                                 <label>Brand</label>
                                 <select name="brand" class="form-control">
+                                <option value="">COLOR</option>
+
                                     <option value="">Brand</option>
                                     <option value="bmw">BMW</option>
                                     <option value="subaru">SUBARU</option>
@@ -219,6 +221,7 @@
                             <div class="form-group col-sm">
                                 <label>Color</label>
                                 <select name="color" class="form-control">
+                                <option value="">COLOR</option>
 
                                     <option value="red">Red</option>
                                     <option value="pink">Pink</option>
@@ -235,6 +238,8 @@
                             <div class="form-group col-sm">
                                 <label>TYPE</label>
                                 <select name="type" class="form-control">
+                                <option value="">TYPE</option>
+
                                     <option value="sweater">SWEATER</option>
                                     <option value="jeans">JEANS</option>
                                     <option value="cap">CAP</option>
@@ -248,6 +253,8 @@
                             <div class="form-group col-sm">
                                 <label>SIZE</label>
                                 <select name="size" class="form-control">
+                                <option value="">SIZE</option>
+
                                     <option value="xs">XS</option>
                                     <option value="s">S</option>
                                     <option value="m">M</option>

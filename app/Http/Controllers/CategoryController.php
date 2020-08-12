@@ -62,23 +62,34 @@ class CategoryController extends Controller
         if ($request->has('color'))
         {
 
-            $products=Product::where('color', 'LIKE', '%' . $request->input('color') . '%')->get();
+            $products=Product::where('color', 'LIKE', '%' . $request->input('color') . '%')->where('category_id', $category->id)->get();
         }
+        if ($request->has('type'))
+        {
+
+            $products=Product::where('type', 'LIKE', '%' . $request->input('type') . '%')->where('category_id', $category->id)->get();
+        }
+
 
         if($request->has('brand'))
         {
-            $products=Product::where('brand', 'LIKE', '%' . $request->input('brand') . '%')->get();
-
+            $products=Product::where('brand', 'LIKE', '%' . $request->input('brand') . '%')->where('category_id', $category->id)->get();
         }
         
         if($request->has('model'))
         {
-            $products=Product::where('model', 'LIKE', '%' . $request->input('model') . '%')->get();
+            $products=Product::where('model', 'LIKE', '%' . $request->input('model') . '%')->where('category_id', $category->id)->get();
 
         }
+        if($request->has('size'))
+        {
+            $products=Product::where('size', 'LIKE', '%' . $request->input('size') . '%')->where('category_id', $category->id)->get();
+
+        }
+             
         if($request->price !=null)
         {
-            $products=Product::orderBy('price',  $request->input('price'))->get();
+            $products=Product::where('category_id', $category->id)->orderBy('price',  $request->input('price'))->get();
         }
         return view('user_side.category',compact('category','products'));
 

@@ -174,6 +174,8 @@
 
                                     <div class="col-sm">
                                         <select name="type" class="form-control">
+                                        <option value="">TYPE</option>
+
                                             <option value="sweater">SWEATER</option>
                                             <option value="jeans">JEANS</option>
                                             <option value="cap">CAP</option>
@@ -186,6 +188,7 @@
                                     </div>
                                     <div class=" col-sm">
                                         <select name="size" class="form-control">
+                                            <option value="">SIZE</option>
                                             <option value="xs">XS</option>
                                             <option value="s">S</option>
                                             <option value="m">M</option>
@@ -196,7 +199,7 @@
                                         </select>
                                     </div>
                                     <div class="col-sm">
-                                        <select  name="price" class="form-control" onchange="this.form.submit()">
+                                        <select name="price" class="form-control" onchange="this.form.submit()">
                                             <option value="">Sort By Price</option>
                                             <option value="asc">ASC</option>
                                             <option value="desc">DESC</option>
@@ -248,13 +251,13 @@
                                 </div>
                                 @else
                                 <div class="col-sm">
-                                        <select class="form-control" name="price" onchange="this.form.submit()">
-                                            <option value="">Sort By Price</option>
-                                            <option value="asc">ASC</option>
-                                            <option value="desc">DESC</option>
+                                    <select class="form-control" name="price" onchange="this.form.submit()">
+                                        <option value="">Sort By Price</option>
+                                        <option value="asc">ASC</option>
+                                        <option value="desc">DESC</option>
 
-                                        </select>
-                                    </div>
+                                    </select>
+                                </div>
                                 @endif
 
 
