@@ -4,6 +4,6 @@ you can specify your business model of vendor enrollment, either by subscribing 
 
 
 
-<p> Hi There to run seeder => run: php artisan db:seed </p>
+<H1> Hi There to run seeder => run: php artisan db:seed </H1>
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
